@@ -7,10 +7,7 @@ const Banner = ({
 }) => {
   return (
     <div
-      className={
-        "block border-black bg-center bg-cover bg-no-repeat border-[1px] " +
-        className
-      }
+      className={"block bg-center bg-cover bg-no-repeat " + className}
       style={{ backgroundImage: `url(${bannerUrl})` }}
     ></div>
   );

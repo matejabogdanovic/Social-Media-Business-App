@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import RoundImage from "../../../common/RoundImage";
 
 const ChatLink = ({
   username,
@@ -15,10 +16,7 @@ const ChatLink = ({
   const linkContent = (
     <>
       <div className="flex gap-4">
-        <div
-          className="inline-block xl:w-[70px] w-[70px] border-black aspect-square rounded-full bg-center bg-contain bg-no-repeat border-[1px] "
-          style={{ backgroundImage: `url(${photoUrl})` }}
-        ></div>
+        <RoundImage photoUrl={photoUrl} className="w-[70px]" />
 
         <span className="font-bold ">{username}</span>
       </div>

@@ -8,7 +8,7 @@ const RoundImage = ({
   return (
     <div
       className={
-        "inline-block border-black bg-white aspect-square rounded-full bg-center bg-contain bg-no-repeat border-[1px] " +
+        "inline-block  aspect-square rounded-full bg-center  bg-no-repeat  bg-cover " +
         className
       }
       style={{ backgroundImage: `url(${photoUrl})` }}

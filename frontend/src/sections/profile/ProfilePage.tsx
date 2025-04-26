@@ -26,14 +26,14 @@ const ProfilePage = () => {
     setData(user.fetchProfileData());
   }, [username, user]);
   return (
-    <Container className="relative">
+    <Container className="relative border-2 border-slate-300 rounded-xl overflow-hidden ">
       <Banner bannerUrl={data?.bannerUrl} className="w-full min-h-[200px] " />
       <RoundImage
         photoUrl={data?.photoUrl}
-        className="w-[150px] absolute top-[100px] left-4 "
+        className="w-[150px] absolute top-[100px] left-4 border-[8px] border-white  "
       />
 
-      <div className="pt-[calc(50px+0.5rem)]  pb-4 px-4 border-2 flex justify-between flex-wrap gap-4">
+      <div className="pt-[calc(50px+0.25rem)]  pb-4 px-4 flex justify-between flex-wrap gap-4">
         <div>
           <div className="font-semibold text-xl xl:text-2xl">
             {data?.fname + " " + data?.lname}
