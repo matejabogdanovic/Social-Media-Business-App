@@ -2,13 +2,13 @@ const RoundImage = ({
   photoUrl,
   className,
 }: {
-  photoUrl: string;
+  photoUrl?: string;
   className: string;
 }) => {
   return (
     <div
       className={
-        "inline-block border-black aspect-square rounded-full bg-center bg-contain bg-no-repeat border-[1px] " +
+        "inline-block border-black bg-white aspect-square rounded-full bg-center bg-contain bg-no-repeat border-[1px] " +
         className
       }
       style={{ backgroundImage: `url(${photoUrl})` }}

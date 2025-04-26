@@ -2,6 +2,7 @@ import {
   MessageType,
   SenderDataType,
 } from "../sections/chats/chat_components/chat_messages_components/Message";
+import { ProfileData } from "../sections/profile/ProfilePage";
 
 export class All {
   private id: number;
@@ -21,6 +22,22 @@ export class All {
       username: "mateja",
       photoUrl:
         "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    };
+    return myData;
+  }
+
+  fetchProfileData(): ProfileData {
+    const myData: ProfileData = {
+      id: 0,
+      fname: "Mateja",
+      lname: "Bogdanovic",
+      email: "mateja@hotmail.com",
+      description: "Web Developer", // regular description | role | education
+      location: "Belgrade, Serbia",
+      photoUrl:
+        "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      bannerUrl:
+        "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     };
     return myData;
   }

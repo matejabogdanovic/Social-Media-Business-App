@@ -4,6 +4,7 @@ import BackLayout from "./layouts/BackLayout";
 import NavbarLayout from "./layouts/NavbarLayout";
 import NavbarXLLayout from "./layouts/NavbarXLLayout";
 import ChatsPage from "./sections/chats/ChatsPage";
+import ProfilePage from "./sections/profile/ProfilePage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const App = () => {
               path: "/chats",
 
               element: <ChatsPage />,
+            },
+            {
+              path: "/profile/:username",
+              element: <ProfilePage />,
             },
           ],
         },

@@ -1,6 +1,6 @@
 import BackButton from "../../../common/BackButton";
 import RoundImage from "../../../common/RoundImage";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { SenderDataType } from "./chat_messages_components/Message";
 
 const ChatHeader = () => {
@@ -14,10 +14,13 @@ const ChatHeader = () => {
   return (
     <div className=" flex justify-center items-center bg-slate-300  [&>:first-child]:xl:hidden sticky top-0 ">
       <BackButton location="/chats" className="absolute left-0" />
-      <div className="font-bold p-4 flex items-center gap-2">
+      <Link
+        to={`/profile/${username}`}
+        className="hover:underline font-bold p-4 flex items-center gap-2"
+      >
         <RoundImage photoUrl={senderData.photoUrl} className="w-[40px]" />
         <div>{username}</div>
-      </div>
+      </Link>
     </div>
   );
 };
