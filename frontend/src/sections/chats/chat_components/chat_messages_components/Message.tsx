@@ -5,7 +5,7 @@ export type MessageType = {
   content: MessageContent;
   date: string;
 };
-export type SenderDataType = {
+export type UserPreviewType = {
   id: number;
   username: string;
   photoUrl: string;

@@ -1,10 +1,10 @@
 import BackButton from "../../../common/BackButton";
 import RoundImage from "../../../common/RoundImage";
 import { Link, useParams } from "react-router-dom";
-import { SenderDataType } from "./chat_messages_components/Message";
+import { UserPreviewType } from "./chat_messages_components/Message";
 
 const ChatHeader = () => {
-  const senderData: SenderDataType = {
+  const senderData: UserPreviewType = {
     id: 1,
     username: "lazarn",
     photoUrl:
