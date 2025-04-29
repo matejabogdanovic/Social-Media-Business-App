@@ -15,8 +15,8 @@ const Posts = () => {
     ],
     description: "My lion king ahhahahah what.",
     date: "16.10.2025.",
-    like_number: 12,
-    comment_number: 3,
+    likeNumber: 12,
+    commentNumber: 3,
   };
   return (
     <>
