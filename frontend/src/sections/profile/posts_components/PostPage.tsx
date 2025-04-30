@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { UserPreviewType } from "../chats/chat_components/chat_messages_components/Message";
-import Post, { PostData } from "./posts_components/Post";
+import { PostContext, PostData } from "./Post";
+import PostGalleryOverlay from "./post_components/post_gallery_components/PostView";
 
-const Posts = () => {
+const PostPage = () => {
   const [postData, setPostData] = useState<PostData>({
     id: 0,
     content: [
@@ -17,13 +17,13 @@ const Posts = () => {
     photoUrl:
       "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   });
-
   return (
-    <>
-      <Post data={postData} />
-      <Post data={postData} />
-    </>
+    <PostContext.Provider value={{ data: postData, setPostData: setPostData }}>
+      <div className=" flex justify-center items-center h-full [&>*]:xl:border-[1px]">
+        <PostGalleryOverlay />{" "}
+      </div>
+    </PostContext.Provider>
   );
 };
 
-export default Posts;
+export default PostPage;

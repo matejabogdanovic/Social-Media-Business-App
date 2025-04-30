@@ -24,6 +24,7 @@ const ProfilePage = () => {
   const { username } = useParams();
   const { user }: { user: All } = useOutletContext();
   const [data, setData] = useState<ProfileData>();
+
   useEffect(() => {
     setData(user.fetchProfileData());
   }, [username, user]);

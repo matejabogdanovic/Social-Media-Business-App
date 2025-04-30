@@ -75,7 +75,7 @@ const Button = ({
       onClick={onClick}
       className={`${
         stylings.find((s) => s.style === style)?.styling
-      }  px-4 py-2 rounded-full border-2 items-center justify-center inline-flex gap-2 `}
+      } min-h-[44px] px-4 py-2 rounded-full border-2 items-center justify-center inline-flex gap-2 `}
     >
       {children}
     </button>

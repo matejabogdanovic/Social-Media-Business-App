@@ -1,17 +1,20 @@
-import { useState } from "react";
-import PostGalleryOverlay from "./post_gallery_components/PostGalleryOverlay";
 import { PostContextType, usePostContext } from "../Post";
+import PostViewOverlay from "./post_gallery_components/PostViewOverlay";
 
-const PostGallery = ({ className }: { className?: string }) => {
-  const [overlayShowing, setOverlayShowing] = useState<boolean>(false);
+const PostGallery = ({
+  className,
+  overlayShowing,
+  showOverlay,
+  hideOverlay,
+}: {
+  overlayShowing: boolean;
+  showOverlay: () => void;
+  hideOverlay: () => void;
+  className?: string;
+}) => {
   const post: PostContextType = usePostContext();
   if (!post) return;
-  const showOverlay = () => {
-    setOverlayShowing(true);
-  };
-  const hideOverlay = () => {
-    setOverlayShowing(false);
-  };
+
   return (
     <>
       <div className={className + " cursor-pointer"} onClick={showOverlay}>
@@ -20,7 +23,7 @@ const PostGallery = ({ className }: { className?: string }) => {
         ))}
       </div>
       {/* overlay */}
-      {overlayShowing && <PostGalleryOverlay hideOverlay={hideOverlay} />}
+      {overlayShowing && <PostViewOverlay hideOverlay={hideOverlay} />}
     </>
   );
 };

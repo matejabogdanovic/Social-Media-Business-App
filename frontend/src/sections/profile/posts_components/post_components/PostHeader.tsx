@@ -8,16 +8,13 @@ const PostHeader = () => {
   return (
     <>
       <div className="flex items-start gap-2 ">
-        <Link to={`/profile/${post.userData.username}`}>
-          <RoundImage
-            photoUrl={post.userData.photoUrl}
-            className="w-[60px]  "
-          />
+        <Link to={`/profile/${post.data.username}`}>
+          <RoundImage photoUrl={post.data.photoUrl} className="w-[60px]  " />
         </Link>
         <span className="flex flex-col justify-start ">
-          <Link to={`/profile/${post.userData.username}`}>
+          <Link to={`/profile/${post.data.username}`}>
             <span className="font-semibold hover:underline">
-              {post.userData.username}
+              {post.data.username}
             </span>
           </Link>
           <div className="text-slate-600 ">{post.data.date}</div>
