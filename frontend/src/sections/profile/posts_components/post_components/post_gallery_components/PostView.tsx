@@ -11,7 +11,7 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
   const [actionsShown, setActionsShown] = useState<boolean>(true);
   const [swiped, setSwiped] = useState<"up" | "down">("down");
   return (
-    <div className="my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-screen overflow-hidden ">
+    <div className="my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-[100dvh] overflow-hidden ">
       <div
         className={` grid xl:grid-cols-[2fr_1fr] xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full  `}
       >
