@@ -13,13 +13,15 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
   return (
     <div className="my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-[100dvh] overflow-hidden ">
       <div
-        className={` grid xl:grid-cols-[2fr_1fr] xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full  `}
+        className={` grid xl:grid-cols-[2fr_1fr] xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full overflow-y-scroll  `}
       >
         {/* gallery */}
-        <div className="order-2 xl:col-start-1 xl:row-start-1  xl:row-end-4 w-full flex justify-center items-center  relative  xl:max-h-[80vh]  ">
+        <div
+          className={`order-2 xl:col-start-1 xl:row-start-1  xl:row-end-4 w-full flex justify-center items-center  relative    `}
+        >
           {/* photos */}
           <div
-            className="bg-gray-200 w-full h-full flex justify-center items-center "
+            className="bg-gray-200 w-full h-full flex justify-center items-center  "
             onTouchStart={() => {
               setActionsShown(false);
             }}
@@ -30,8 +32,8 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
             {post.data.content.map((url, index) => (
               <img
                 src={url}
-                className={`block xl:max-h-[500px] transition-all ${
-                  swiped === "up" ? " max-h-[20vh]" : "max-h-[70vh]"
+                className={`block  transition-all duration-400 xl:max-h-full ${
+                  swiped === "up" ? " max-h-[10vh]" : "max-h-[100vh]"
                 } pointer-events-none`}
                 key={index}
               />
@@ -40,8 +42,9 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
           {/* buttons mobile */}
           <div
             className={
-              "xl:hidden absolute  right-0 bottom-1/3 transition-opacity " +
-              (actionsShown ? "opacity-100" : "opacity-0")
+              `xl:hidden absolute  right-0 bottom-1/3 transition-opacity  ${
+                swiped === "up" ? " hidden" : ""
+              }  ` + (actionsShown ? "opacity-100" : "opacity-0")
             }
           >
             <div className="bg-white rounded-l-full [&>*]:w-full">
@@ -54,7 +57,11 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
         </div>
 
         {/* header and description */}
-        <div className=" order-1 p-4 ">
+        <div
+          className={` xl:max-h-full xl:p-4 ${
+            swiped === "up" ? " max-h-0 p-0 " : "p-4"
+          } xl:block  order-1  `}
+        >
           <div className=" flex items-start justify-between ">
             <PostHeader />
             {hideOverlay && <button onClick={() => hideOverlay()}>X</button>}

@@ -30,21 +30,23 @@ const Comments = ({
   };
   return (
     <div
-      className={`flex-grow grid grid-rows-[auto_1fr] overflow-hidden  `}
+      className={`flex-grow bg-white grid grid-rows-[auto_1fr] overflow-hidden  `}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* comments header */}
       <div
-        className={`font-semibold text-center w-full rounded-b-xl xl:static  py-1 px-2 mt-auto bg-white ${
+        className={`w-full bg-white xl:static ${
           swiped === "up" ? "" : "fixed"
         } bottom-0 `}
         onClick={() => {
           setSwiped((prev) => (prev === "up" ? "down" : "up"));
         }}
       >
-        Comments {post.data.commentNumber}
-        <div className="h-1 w-12 mx-auto rounded-full bg-black self-center"></div>
+        <div className="font-semibold text-center w-full rounded-b-xl   py-1 px-2 mt-auto bg-slate-300 ">
+          Comments {post.data.commentNumber}
+          <div className="h-1 w-12 mx-auto rounded-full bg-black self-center"></div>
+        </div>
       </div>
 
       {/* comments */}
