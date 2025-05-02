@@ -15,11 +15,11 @@ const ShareButton = () => {
   return (
     <>
       {overlayShown && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center ">
-          <div className="bg-white rounded-xl p-2 flex gap-2">
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-20">
+          <div className="bg-white rounded-xl p-2 flex  gap-2">
             <input
               type="text"
-              className="rounded-xl border-[1px] p-2 xl:min-w-[50ch] w-full"
+              className="rounded-xl border-[1px] p-2 xl:min-w-[50ch] w-full overflow-auto "
               value={text}
               readOnly={true}
             />

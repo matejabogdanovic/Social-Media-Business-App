@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PostContext, PostData } from "./Post";
-import PostGalleryOverlay from "./post_components/post_gallery_components/PostView";
+import PostView from "./post_components/post_gallery_components/PostView";
 
 const PostPage = () => {
   const [postData, setPostData] = useState<PostData>({
@@ -17,10 +17,11 @@ const PostPage = () => {
     photoUrl:
       "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   });
+
   return (
     <PostContext.Provider value={{ data: postData, setPostData: setPostData }}>
-      <div className=" flex justify-center items-center h-full [&>*]:xl:border-[1px]">
-        <PostGalleryOverlay />{" "}
+      <div className=" xl:flex justify-center items-center h-full  [&>*]:xl:border-[1px] overflow-y-hidden">
+        <PostView />
       </div>
     </PostContext.Provider>
   );

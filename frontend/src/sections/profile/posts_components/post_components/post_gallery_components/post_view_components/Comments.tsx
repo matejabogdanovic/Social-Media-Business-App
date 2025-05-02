@@ -37,7 +37,7 @@ const Comments = ({
       {/* comments header */}
       <div
         className={`w-full bg-white xl:static ${
-          swiped === "up" ? "" : "fixed"
+          swiped === "up" ? "" : "fixed "
         } bottom-0 `}
         onClick={() => {
           setSwiped((prev) => (prev === "up" ? "down" : "up"));
@@ -63,6 +63,7 @@ const Comments = ({
             e.stopPropagation();
           }}
         >
+          {/* <div className="px-2">comment</div>
           <div className="px-2">comment</div>
           <div className="px-2">comment</div>
           <div className="px-2">comment</div>
@@ -91,8 +92,7 @@ const Comments = ({
           <div className="px-2">comment</div>
           <div className="px-2">comment</div>
           <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
+          <div className="px-2">comment</div> */}
 
           <div className="px-2">comment</div>
           <div className="px-2">comment</div>

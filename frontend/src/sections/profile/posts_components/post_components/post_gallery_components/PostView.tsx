@@ -4,6 +4,7 @@ import { useState } from "react";
 import LikeButton from "../LikeButton";
 import ShareButton from "../ShareButton";
 import Comments from "./post_view_components/Comments";
+import PostDescription from "../PostDescription";
 
 const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
   const post: PostContextType = usePostContext();
@@ -11,9 +12,13 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
   const [actionsShown, setActionsShown] = useState<boolean>(true);
   const [swiped, setSwiped] = useState<"up" | "down">("down");
   return (
-    <div className="my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-[100dvh] overflow-hidden ">
+    <div
+      className={`my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-[100dvh] overflow-hidden xl:static ${
+        swiped === "up" ? "fixed top-0" : ""
+      }`}
+    >
       <div
-        className={` grid xl:grid-cols-[2fr_1fr] xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full overflow-y-scroll  `}
+        className={` grid xl:grid-cols-[2fr_1fr] xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full xl:overflow-y-auto overflow-y-scroll  `}
       >
         {/* gallery */}
         <div
@@ -66,9 +71,7 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
             <PostHeader />
             {hideOverlay && <button onClick={() => hideOverlay()}>X</button>}
           </div>
-          <div className="overflow-y-auto max-h-[20vh] ">
-            {post.data.description}
-          </div>
+          <PostDescription />
         </div>
 
         {/* buttons */}
@@ -76,7 +79,13 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
           className={`order-3 xl:row-start-2 xl:row-end-4 flex flex-col overflow-hidden  `}
         >
           {/* buttons xl */}
-          <div className="  px-4 py-2 xl:flex flex-row-reverse items-start gap-2  hidden">
+          <div
+            className={`  px-4 py-2 xl:flex flex-row-reverse items-start gap-2  hidden  ${
+              !actionsShown && swiped !== "up"
+                ? "[&+*]:opacity-0"
+                : "[&+*]:opacity-100"
+            }`}
+          >
             <LikeButton />
             <ShareButton />
           </div>

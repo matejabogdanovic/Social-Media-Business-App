@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UserPreviewType } from "../chats/chat_components/chat_messages_components/Message";
+
 import Post, { PostData } from "./posts_components/Post";
 
 const Posts = () => {

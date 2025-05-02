@@ -1,4 +1,3 @@
-import { UserPreviewType } from "../../chats/chat_components/chat_messages_components/Message";
 import CommentButton from "./post_components/CommentButton";
 import LikeButton from "./post_components/LikeButton";
 import PostGallery from "./post_components/PostGallery";
@@ -6,8 +5,7 @@ import PostHeader from "./post_components/PostHeader";
 
 import { createContext, useContext, useState } from "react";
 import ShareButton from "./post_components/ShareButton";
-import { FaComment } from "react-icons/fa6";
-import Button from "../../../common/Button";
+import PostDescription from "./post_components/PostDescription";
 
 export type PostData = {
   id: number;
@@ -46,7 +44,7 @@ const Post = ({ data }: { data: PostData }) => {
       >
         <PostHeader />
 
-        <div>{data.description}</div>
+        <PostDescription />
 
         <PostGallery
           overlayShowing={overlayShowing}
