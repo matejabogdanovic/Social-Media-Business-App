@@ -1,17 +1,46 @@
 import { useState } from "react";
 import { PostContextType, usePostContext } from "../../../Post";
+import Comment, { CommentType } from "./comments_components/Comment";
+import CommentInputForm from "./comments_components/CommentInputForm";
+import CommentContextProvider from "./comments_components/CommentContextProvider";
 
 const Comments = ({
   swiped,
   setSwiped,
+  hideOverlay,
 }: {
   swiped: "up" | "down";
   setSwiped: React.Dispatch<React.SetStateAction<"up" | "down">>;
+  hideOverlay?: () => void;
 }) => {
   const post: PostContextType = usePostContext();
   if (!post) return null;
   const [startY, setStartY] = useState<number | null>(null);
-  console.log("a");
+
+  const comments: CommentType[] = [
+    {
+      id: 1,
+      username: "jovana_m",
+      photoUrl: "https://randomuser.me/api/portraits/women/44.jpg",
+      date: "2025-05-04T10:15:00Z",
+      comment: "Baš lepo objašnjeno, hvala ti na ovom postu!",
+    },
+    {
+      id: 2,
+      username: "filip_t",
+      photoUrl: "https://randomuser.me/api/portraits/men/12.jpg",
+      date: "2025-05-04T11:03:00Z",
+      comment: "Dodao bih još jedan savet u vezi ove teme...",
+    },
+    {
+      id: 3,
+      username: "milica.k",
+      photoUrl: "https://randomuser.me/api/portraits/women/68.jpg",
+      date: "2025-05-04T11:57:00Z",
+      comment: "Ovo mi je baš pomoglo, nastavite sa ovakvim sadržajem!",
+    },
+  ];
+
   const handleTouchStart = (e: React.TouchEvent) => {
     setStartY(e.touches[0].clientY);
   };
@@ -54,66 +83,25 @@ const Comments = ({
         className={` grid-rows-[1fr_auto] xl:grid overflow-hidden
             ${swiped === "up" ? "grid" : "hidden"}`}
       >
-        <div
-          className="overflow-y-scroll"
-          onTouchStart={(e) => {
-            e.stopPropagation();
-          }}
-          onTouchEnd={(e) => {
-            e.stopPropagation();
-          }}
-        >
-          {/* <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div> */}
-
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2">comment</div>
-          <div className="px-2  bg-black">comment</div>
-        </div>
-        {/* input */}
-        <div className="">
-          <input
-            type="search"
-            style={{ WebkitAppearance: "none", MozAppearance: "none" }}
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck="false"
-            className="block w-full border-t-[1px] p-2 rounded-xl "
-            placeholder="Comment..."
-          />
-        </div>
+        <CommentContextProvider>
+          <div
+            className="overflow-y-scroll"
+            onTouchStart={(e) => {
+              e.stopPropagation();
+            }}
+            onTouchEnd={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            {comments.map((data, i) => (
+              <Comment data={data} key={i} hideOverlay={hideOverlay} />
+            ))}
+          </div>
+          {/* input */}
+          <div className="">
+            <CommentInputForm />
+          </div>
+        </CommentContextProvider>
       </div>
     </div>
   );

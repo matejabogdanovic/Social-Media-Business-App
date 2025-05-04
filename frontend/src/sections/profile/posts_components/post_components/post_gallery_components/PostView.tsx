@@ -6,7 +6,7 @@ import ShareButton from "../ShareButton";
 import Comments from "./post_view_components/Comments";
 import PostDescription from "../PostDescription";
 
-const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
+const PostView = ({ hideOverlay }: { hideOverlay?: () => void }) => {
   const post: PostContextType = usePostContext();
   if (!post) return;
   const [actionsShown, setActionsShown] = useState<boolean>(true);
@@ -89,7 +89,11 @@ const PostView = ({ hideOverlay }: { hideOverlay?: Function }) => {
             <LikeButton />
             <ShareButton />
           </div>
-          <Comments setSwiped={setSwiped} swiped={swiped} />
+          <Comments
+            setSwiped={setSwiped}
+            swiped={swiped}
+            hideOverlay={hideOverlay}
+          />
         </div>
       </div>
     </div>
