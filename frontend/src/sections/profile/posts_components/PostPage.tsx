@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PostContext, PostData } from "./Post";
-import PostView from "./post_components/post_gallery_components/PostView";
+import PostView from "./post_components/PostView";
 
 const PostPage = () => {
   const [postData, setPostData] = useState<PostData>({

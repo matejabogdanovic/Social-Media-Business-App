@@ -1,11 +1,14 @@
-import CommentButton from "./post_components/CommentButton";
-import LikeButton from "./post_components/LikeButton";
+import LikeButton from "./post_components/post_buttons/LikeButton";
 import PostGallery from "./post_components/PostGallery";
 import PostHeader from "./post_components/PostHeader";
 
-import { createContext, useContext, useState } from "react";
-import ShareButton from "./post_components/ShareButton";
+import { createContext, useContext, useRef, useState } from "react";
+
 import PostDescription from "./post_components/PostDescription";
+
+import PostView from "./post_components/PostView";
+import CommentButton from "./post_components/post_buttons/CommentButton";
+import ShareButton from "./post_components/post_buttons/ShareButton";
 
 export type PostData = {
   id: number;
@@ -31,6 +34,7 @@ export const usePostContext = () => useContext(PostContext);
 const Post = ({ data }: { data: PostData }) => {
   const [postData, setPostData] = useState<PostData>(data);
   const [overlayShowing, setOverlayShowing] = useState<boolean>(false);
+  const showComments = useRef<boolean>(false);
   const showOverlay = () => {
     setOverlayShowing(true);
   };
@@ -47,16 +51,30 @@ const Post = ({ data }: { data: PostData }) => {
         <PostDescription />
 
         <PostGallery
-          overlayShowing={overlayShowing}
-          showOverlay={showOverlay}
-          hideOverlay={hideOverlay}
+          showOverlay={() => {
+            showComments.current = false;
+            showOverlay();
+          }}
           className="w-full flex items-center justify-center bg-gray-200"
         />
+
+        {/* overlay */}
+        {overlayShowing && (
+          <div className="absolute z-10 w-full h-full top-0 left-0 bg-black bg-opacity-50 flex items-center   ">
+            <PostView
+              showComments={showComments.current}
+              hideOverlay={hideOverlay}
+            />
+          </div>
+        )}
 
         <div className="w-full flex justify-end gap-2 flex-wrap-reverse ">
           <ShareButton />
           <CommentButton
-            onClick={showOverlay}
+            onClick={() => {
+              showComments.current = true;
+              showOverlay();
+            }}
             commentNumber={postData.commentNumber}
           />
 

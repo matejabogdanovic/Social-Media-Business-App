@@ -1,16 +1,25 @@
-import { PostContextType, usePostContext } from "../../Post";
-import PostHeader from "../PostHeader";
 import { useState } from "react";
-import LikeButton from "../LikeButton";
-import ShareButton from "../ShareButton";
-import Comments from "./post_view_components/Comments";
-import PostDescription from "../PostDescription";
+import { PostContextType, usePostContext } from "../Post";
+import LikeButton from "./post_buttons/LikeButton";
+import Comments from "./post_view_components/post_view_components/Comments";
+import PostDescription from "./PostDescription";
+import PostHeader from "./PostHeader";
+import ShareButton from "./post_buttons/ShareButton";
 
-const PostView = ({ hideOverlay }: { hideOverlay?: () => void }) => {
+const PostView = ({
+  hideOverlay,
+  showComments = false,
+}: {
+  hideOverlay?: () => void;
+  showComments?: boolean;
+}) => {
   const post: PostContextType = usePostContext();
   if (!post) return;
   const [actionsShown, setActionsShown] = useState<boolean>(true);
-  const [swiped, setSwiped] = useState<"up" | "down">("down");
+  const [swiped, setSwiped] = useState<"up" | "down">(
+    showComments ? "up" : "down"
+  );
+
   return (
     <div
       className={`my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-[100dvh] overflow-hidden xl:static ${

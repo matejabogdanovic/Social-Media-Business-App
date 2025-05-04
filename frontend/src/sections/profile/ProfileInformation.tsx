@@ -1,10 +1,11 @@
 import { BiSend } from "react-icons/bi";
 import { MdMail } from "react-icons/md";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import RoundImage from "../../common/RoundImage";
 import Banner from "./profile_information_components/Banner";
 import { ProfileData } from "./ProfilePage";
 import Button from "../../common/Button";
+import FollowButton from "./profile_information_components/profile_information_buttons/FollowButton";
 
 const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
   const { username } = useParams();
@@ -26,6 +27,7 @@ const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
         </div>
 
         <div className="flex items-end gap-2 flex-wrap ">
+          <FollowButton />
           <Button to={`mailto:${data?.email}`}>
             <MdMail />
             Contact

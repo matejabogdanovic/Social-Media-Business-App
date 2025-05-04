@@ -1,7 +1,7 @@
 import { BiShareAlt } from "react-icons/bi";
-import Button from "../../../../common/Button";
-import { PostContextType, usePostContext } from "../Post";
 import { useState } from "react";
+import Button from "../../../../../common/Button";
+import { PostContextType, usePostContext } from "../../Post";
 
 const ShareButton = () => {
   const [overlayShown, setOverlayShown] = useState<boolean>(false);

@@ -22,7 +22,7 @@ const Comments = ({
       id: 1,
       username: "jovana_m",
       photoUrl: "https://randomuser.me/api/portraits/women/44.jpg",
-      date: "2025-05-04T10:15:00Z",
+      date: "1 hr ago",
       comment: "Baš lepo objašnjeno, hvala ti na ovom postu!",
     },
     {
@@ -72,7 +72,7 @@ const Comments = ({
           setSwiped((prev) => (prev === "up" ? "down" : "up"));
         }}
       >
-        <div className="font-semibold text-center w-full rounded-b-xl   py-1 px-2 mt-auto bg-slate-300 ">
+        <div className="font-semibold text-center w-full   py-1 px-2 mt-auto  ">
           Comments {post.data.commentNumber}
           <div className="h-1 w-12 mx-auto rounded-full bg-black self-center"></div>
         </div>

@@ -1,6 +1,6 @@
 import { FaThumbsUp } from "react-icons/fa6";
-import Button from "../../../../common/Button";
-import { PostContextType, usePostContext } from "../Post";
+import Button from "../../../../../common/Button";
+import { PostContextType, usePostContext } from "../../Post";
 
 const LikeButton = () => {
   const post: PostContextType = usePostContext();

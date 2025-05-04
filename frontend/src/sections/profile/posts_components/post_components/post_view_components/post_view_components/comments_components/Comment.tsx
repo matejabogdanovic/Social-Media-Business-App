@@ -18,17 +18,26 @@ const Comment = ({
   hideOverlay?: () => void;
 }) => {
   return (
-    <div className="flex items-start gap-2 p-2">
+    <div className="flex  gap-2 p-2  ">
       <Link to={`/profile/${data.username}`} onClick={hideOverlay}>
         <RoundImage photoUrl={data.photoUrl} className="w-[60px]  " />
       </Link>
-      <span className="flex flex-col justify-start ">
-        <Link to={`/profile/${data.username}`} onClick={hideOverlay}>
-          <span className="font-semibold hover:underline">{data.username}</span>
-        </Link>
-        <span className="text-slate-600 ">{data.date}</span>
+
+      <div className="flex-1 ">
+        <div className="flex flex-wrap  justify-between">
+          <Link
+            to={`/profile/${data.username}`}
+            className="mr-2"
+            onClick={hideOverlay}
+          >
+            <span className="font-semibold hover:underline">
+              {data.username}
+            </span>
+          </Link>
+          <span className=" text-slate-600 ">{data.date}</span>
+        </div>
         <div>{data.comment}</div>
-      </span>
+      </div>
     </div>
   );
 };

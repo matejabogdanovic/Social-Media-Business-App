@@ -41,6 +41,7 @@ const Button = ({
       style: "REGULAR_OUTLINE",
       styling: "bg-inherit text-sky-500 border-sky-500 ",
     },
+
     {
       style: "DANGER",
       styling: "bg-danger text-white border-transparent",
