@@ -19,7 +19,7 @@ const ChatInputForm = () => {
 
         setMsg("");
       }}
-      className="flex w-full p-4 border-t-2 rounded-lg"
+      className="flex w-full p-4 border-t-2 border-dark border-opacity-20  rounded-lg"
       autoComplete="off"
     >
       <input
@@ -34,7 +34,7 @@ const ChatInputForm = () => {
         value={msg}
       />
       <button type="submit">
-        <BiSend className="-rotate-90 text-lg fill-neutral-500" />
+        <BiSend className="-rotate-90 text-lg fill-secondary " />
       </button>
     </form>
   );

@@ -14,7 +14,7 @@ const LoadMoreButton = ({
         loadMoreData();
       }}
       disabled={loading}
-      className="flex justify-center items-center p-4 my-4  bg-slate-200 rounded-full "
+      className="flex justify-center items-center p-4 my-4  bg-light rounded-full "
     >
       {loading ? (
         <Spinner loading={loading} className="!max-w-5 !max-h-5 !my-0 " />

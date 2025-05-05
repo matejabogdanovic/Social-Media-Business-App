@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-light text-dark;
+}
+
+
+
+/* hr {
+  @apply border-secondary border-opacity-30;
+} */
+
+/* input,
+select {
+  @apply w-full p-2 rounded-md bg-secondary bg-opacity-10 appearance-none border-b-[1px] border-r-[1px] border-secondary border-opacity-30;
+
+  &:focus {
+    @apply outline-none
+  }
+} */
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

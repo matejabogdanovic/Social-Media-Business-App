@@ -35,16 +35,16 @@ const Button = ({
   }[] = [
     {
       style: "REGULAR",
-      styling: "bg-sky-500 text-white border-transparent",
+      styling: "bg-secondary text-light border-transparent",
     },
     {
       style: "REGULAR_OUTLINE",
-      styling: "bg-inherit text-sky-500 border-sky-500 ",
+      styling: "bg-inherit text-secondary border-secondary ",
     },
 
     {
       style: "DANGER",
-      styling: "bg-danger text-white border-transparent",
+      styling: "bg-danger text-light border-transparent",
     },
     {
       style: "DANGER_OUTLINE",
@@ -52,7 +52,7 @@ const Button = ({
     },
     {
       style: "GOOD",
-      styling: "bg-good text-white border-transparent",
+      styling: "bg-good text-light border-transparent",
     },
     {
       style: "GOOD_OUTLINE",
@@ -60,11 +60,11 @@ const Button = ({
     },
     {
       style: "DISABLED",
-      styling: "bg-light text-white border-transparent",
+      styling: "bg-light text-light border-transparent",
     },
     {
       style: "DISABLED_OUTLINE",
-      styling: "bg-inherit text-dark border-dark ",
+      styling: "bg-inherit text-secondary border-secondary ",
     },
   ];
 

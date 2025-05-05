@@ -22,7 +22,7 @@ const PostView = ({
 
   return (
     <div
-      className={`my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-white   h-[100dvh] overflow-hidden xl:static ${
+      className={`my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-light   h-[100dvh] overflow-hidden xl:static ${
         swiped === "up" ? "fixed top-0" : ""
       }`}
     >
@@ -35,7 +35,7 @@ const PostView = ({
         >
           {/* photos */}
           <div
-            className="bg-gray-200 w-full h-full flex justify-center items-center  "
+            className="bg-dark bg-opacity-10 w-full h-full flex justify-center items-center  "
             onTouchStart={() => {
               setActionsShown(false);
             }}
@@ -61,10 +61,10 @@ const PostView = ({
               }  ` + (actionsShown ? "opacity-100" : "opacity-0")
             }
           >
-            <div className="bg-white rounded-l-full [&>*]:w-full">
+            <div className="bg-light rounded-l-full [&>*]:w-full">
               <LikeButton />
             </div>
-            <div className="bg-white rounded-l-full  mt-2 [&>*]:w-full">
+            <div className="bg-light rounded-l-full  mt-2 [&>*]:w-full">
               <ShareButton />
             </div>
           </div>

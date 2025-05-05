@@ -5,6 +5,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        dark: "#090b0d",
+        light: "#f7fefe",
+        primary: "#16d3eb",
+        secondary: "#89a9f5",
+        accent: "#4c59ef",
+      },
       keyframes: {
         likeBounce: {
           "0%, 100%": {

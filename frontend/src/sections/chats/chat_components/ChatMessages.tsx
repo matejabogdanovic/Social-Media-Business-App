@@ -1,8 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Message, {
-  MessageType,
-  SenderDataType,
-} from "./chat_messages_components/Message";
+import Message, { MessageType } from "./chat_messages_components/Message";
 import { useOutletContext, useParams } from "react-router-dom";
 import { All } from "../../../roles/All";
 import LoadMoreButton from "./chat_messages_components/LoadMoreButton";
@@ -10,7 +7,7 @@ import LoadMoreButton from "./chat_messages_components/LoadMoreButton";
 const ChatMessages = () => {
   const { user }: { user: All } = useOutletContext();
   const { username } = useParams();
-  const myData: SenderDataType = {
+  const myData = {
     id: 0,
     username: "mateja",
     photoUrl:

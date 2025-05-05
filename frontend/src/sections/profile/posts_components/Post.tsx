@@ -42,7 +42,7 @@ const Post = ({ data }: { data: PostData }) => {
     setOverlayShowing(false);
   };
   return (
-    <div className="flex flex-col items-start xl:border-[1px] border-b-[1px] border-slate-300 xl:rounded-xl p-4 gap-2 my-4">
+    <div className="flex flex-col items-start xl:border-[1px] border-b-[1px] border-dark border-opacity-20 xl:rounded-xl p-4 gap-2 my-4">
       <PostContext.Provider
         value={{ data: postData, setPostData: setPostData }}
       >
@@ -55,12 +55,12 @@ const Post = ({ data }: { data: PostData }) => {
             showComments.current = false;
             showOverlay();
           }}
-          className="w-full flex items-center justify-center bg-gray-200"
+          className="w-full flex items-center justify-center bg-dark bg-opacity-10 "
         />
 
         {/* overlay */}
         {overlayShowing && (
-          <div className="absolute z-10 w-full h-full top-0 left-0 bg-black bg-opacity-50 flex items-center   ">
+          <div className="absolute z-10 w-full h-full top-0 left-0 bg-dark bg-opacity-50 flex items-center   ">
             <PostView
               showComments={showComments.current}
               hideOverlay={hideOverlay}

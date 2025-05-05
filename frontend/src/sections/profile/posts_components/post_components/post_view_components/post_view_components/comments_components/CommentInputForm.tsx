@@ -35,7 +35,7 @@ const CommentInputForm = () => {
         value={cmt}
       />
       <button type="submit">
-        <BiSend className="-rotate-90 text-lg fill-neutral-500" />
+        <BiSend className="-rotate-90 text-lg fill-secondary " />
       </button>
     </form>
   );

@@ -22,7 +22,7 @@ const ChatLink = ({
       </div>
       <span
         className={
-          "bg font-bold text-indigo-600 " + (newMessage ? "" : "opacity-0")
+          "bg font-bold text-accent " + (newMessage ? "" : "opacity-0")
         }
       >
         o
@@ -30,7 +30,7 @@ const ChatLink = ({
     </>
   );
   const linkStyle =
-    "bg-slate-200 hover:bg-opacity-50 w-full  justify-between items-center gap-4 p-4 flex ";
+    "bg-secondary bg-opacity-20 hover:bg-opacity-50 w-full  justify-between items-center gap-4 p-4 flex ";
 
   return (
     <>
@@ -39,7 +39,7 @@ const ChatLink = ({
           navigate(`/chats/${username}`);
         }}
         className={
-          linkStyle + (selected === username ? "xl:!bg-slate-300" : "")
+          linkStyle + (selected === username ? "xl:!bg-opacity-30" : "")
         }
       >
         {linkContent}
