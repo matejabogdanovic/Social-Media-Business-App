@@ -20,7 +20,7 @@ const CommentInputForm = () => {
 
         setCmt("");
       }}
-      className="flex w-full p-4 border-light-blue rounded-lg"
+      className="flex w-full p-4  border-t-[1px]  border-dark-100  rounded-lg"
       autoComplete="off"
     >
       <input

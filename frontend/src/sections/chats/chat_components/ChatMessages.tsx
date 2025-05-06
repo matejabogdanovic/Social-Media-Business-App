@@ -31,7 +31,7 @@ const ChatMessages = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   return (
     <div
-      className="flex-1 flex flex-col-reverse  px-2 overflow-y-scroll "
+      className="flex-1 flex flex-col-reverse  px-2 overflow-y-scroll  "
       ref={scrollContainerRef}
     >
       <>

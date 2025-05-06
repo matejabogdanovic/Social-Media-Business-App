@@ -30,7 +30,7 @@ const ChatLink = ({
     </>
   );
   const linkStyle =
-    "bg-secondary-100 bg-opacity-20 hover:bg-opacity-50 w-full  justify-between items-center gap-4 p-4 flex ";
+    "bg-secondary-200 border-b-[1px]  border-dark-100   hover:bg-secondary-100 w-full  justify-between items-center gap-4 p-4 flex ";
 
   return (
     <>
@@ -39,7 +39,7 @@ const ChatLink = ({
           navigate(`/chats/${username}`);
         }}
         className={
-          linkStyle + (selected === username ? "xl:!bg-opacity-30" : "")
+          linkStyle + (selected === username ? "!bg-secondary-100" : "")
         }
       >
         {linkContent}

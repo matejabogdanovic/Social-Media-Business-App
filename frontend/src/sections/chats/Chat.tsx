@@ -8,7 +8,7 @@ const Chat = () => {
   const { username } = useParams();
 
   return (
-    <div className="w-full h-full relative flex flex-col">
+    <div className="w-full h-full relative flex flex-col ">
       {username && (
         <>
           <ChatHeader />

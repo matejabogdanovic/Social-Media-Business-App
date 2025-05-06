@@ -42,7 +42,7 @@ const Post = ({ data }: { data: PostData }) => {
     setOverlayShowing(false);
   };
   return (
-    <div className="flex flex-col  items-start  light-blue-card p-4 gap-2 my-4">
+    <div className="flex flex-col  items-start border-[1px]  border-dark-100  xl:rounded-xl bg-light p-4 gap-2 my-4">
       <PostContext.Provider
         value={{ data: postData, setPostData: setPostData }}
       >

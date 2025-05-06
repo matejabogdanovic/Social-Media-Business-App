@@ -9,9 +9,9 @@ const ChatsPage = () => {
   return (
     <>
       {/* pc */}
-      <Container className="border-x-[1px] border-b-[1px] border-dark-900 border-opacity-20 rounded-md  xl:flex hidden h-full  ">
+      <Container className="border-[1px]   border-dark-100  rounded-md  xl:flex hidden h-full  bg-light overflow-hidden ">
         <ChatLinks />
-        <div className="flex  border-l-[1px] border-dark-900 border-opacity-20 w-2/3 ">
+        <div className="flex  border-l-[1px]  border-dark-100   w-2/3 ">
           {<Chat />}
         </div>
       </Container>

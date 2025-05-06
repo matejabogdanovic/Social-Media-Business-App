@@ -59,20 +59,20 @@ const Comments = ({
   };
   return (
     <div
-      className={`flex-grow xl:from-transparent xl:to-transparent light-blue-gradient  grid grid-rows-[auto_1fr] overflow-hidden  `}
+      className={`flex-grow bg-light  grid grid-rows-[auto_1fr] overflow-hidden  `}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* comments header */}
       <div
-        className={`w-full  xl:static xl:from-transparent xl:to-transparent  ${
-          swiped === "up" ? "" : "fixed  light-blue-gradient"
+        className={`w-full  xl:static  ${
+          swiped === "up" ? "" : "fixed"
         } bottom-0 `}
         onClick={() => {
           setSwiped((prev) => (prev === "up" ? "down" : "up"));
         }}
       >
-        <div className="font-semibold text-center w-full   py-1 px-2 mt-auto  ">
+        <div className="font-semibold text-center w-full bg-light  py-1 px-2 mt-auto  ">
           Comments {post.data.commentNumber}
           <div className="h-1 w-12 mx-auto rounded-full bg-dark-900 self-center"></div>
         </div>
