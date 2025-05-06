@@ -8,7 +8,7 @@ const Navbar = ({ className = "" }: { className?: string }) => {
   return (
     <nav
       className={
-        "bg-light border-b-[1px] border-dark border-opacity-20 " + className
+        "bg-light border-b-[1px] border-dark-900 border-opacity-20 " + className
       }
     >
       <Container className="flex justify-between [&>*]:p-4 ">

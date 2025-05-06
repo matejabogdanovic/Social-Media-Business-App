@@ -12,7 +12,7 @@ const ChatHeader = () => {
   };
   const { username } = useParams();
   return (
-    <div className=" flex justify-center items-center bg-secondary bg-opacity-30  [&>:first-child]:xl:hidden sticky top-0 ">
+    <div className=" flex justify-center items-center bg-secondary-100 bg-opacity-30  [&>:first-child]:xl:hidden sticky top-0 ">
       <BackButton location="/chats" className="absolute left-0" />
       <Link
         to={`/profile/${username}`}

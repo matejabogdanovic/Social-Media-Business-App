@@ -34,7 +34,7 @@ const Comment = ({
               {data.username}
             </span>
           </Link>
-          <span className=" text-dark ">{data.date}</span>
+          <span className=" text-dark-900 ">{data.date}</span>
         </div>
         <div>{data.comment}</div>
       </div>

@@ -35,11 +35,11 @@ const Button = ({
   }[] = [
     {
       style: "REGULAR",
-      styling: "bg-secondary text-light border-transparent",
+      styling: "bg-primary text-light border-transparent",
     },
     {
       style: "REGULAR_OUTLINE",
-      styling: "bg-inherit text-secondary border-secondary ",
+      styling: "bg-inherit text-primary border-primary ",
     },
 
     {
@@ -64,7 +64,7 @@ const Button = ({
     },
     {
       style: "DISABLED_OUTLINE",
-      styling: "bg-inherit text-secondary border-secondary ",
+      styling: "bg-inherit text-secondary-100 border-secondary-100 ",
     },
   ];
 

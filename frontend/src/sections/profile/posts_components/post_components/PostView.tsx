@@ -22,7 +22,7 @@ const PostView = ({
 
   return (
     <div
-      className={`my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl bg-light   h-[100dvh] overflow-hidden xl:static ${
+      className={`my-0 mx-auto xl:w-[80%] xl:h-[80vh] w-full xl:rounded-xl light-blue-gradient   h-[100dvh] overflow-hidden xl:static ${
         swiped === "up" ? "fixed top-0" : ""
       }`}
     >
@@ -35,7 +35,7 @@ const PostView = ({
         >
           {/* photos */}
           <div
-            className="bg-dark bg-opacity-10 w-full h-full flex justify-center items-center  "
+            className="light-blue-gradient w-full h-full flex justify-center items-center  "
             onTouchStart={() => {
               setActionsShown(false);
             }}

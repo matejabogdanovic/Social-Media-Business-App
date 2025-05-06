@@ -3,18 +3,50 @@
 @tailwind utilities;
 
 body {
-  @apply bg-light text-dark;
+  @apply bg-white text-dark-900;
 }
 
+.light-blue-gradient {
+  @apply from-secondary-100 to-secondary-50 bg-gradient-to-br
+}
 
+.border-light-blue {
+  @apply border-[1px] border-secondary-100
+}
+
+.light-blue-card {
+  @apply light-blue-gradient border-light-blue xl:rounded-xl
+}
+
+/* Scrollbar stil globalno */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: theme('colors.secondary.50');
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme('colors.primary');
+  border-radius: 6px;
+}
+
+/* Firefox podrška */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.primary') theme('colors.secondary.50');
+}
 
 /* hr {
-  @apply border-secondary border-opacity-30;
+  @apply border-secondary-100 border-opacity-30;
 } */
 
 /* input,
 select {
-  @apply w-full p-2 rounded-md bg-secondary bg-opacity-10 appearance-none border-b-[1px] border-r-[1px] border-secondary border-opacity-30;
+  @apply w-full p-2 rounded-md bg-secondary-100 bg-opacity-10 appearance-none border-b-[1px] border-r-[1px] border-secondary-100 border-opacity-30;
 
   &:focus {
     @apply outline-none

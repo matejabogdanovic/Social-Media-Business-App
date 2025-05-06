@@ -20,7 +20,7 @@ const CommentInputForm = () => {
 
         setCmt("");
       }}
-      className="flex w-full p-4 border-t-2 rounded-lg"
+      className="flex w-full p-4 border-light-blue rounded-lg"
       autoComplete="off"
     >
       <input
@@ -29,13 +29,13 @@ const CommentInputForm = () => {
         autoComplete="off"
         autoCorrect="off"
         spellCheck="false"
-        className="w-full"
+        className="w-full bg-transparent"
         placeholder="Comment..."
         onChange={(e) => setCmt(e.target.value)}
         value={cmt}
       />
       <button type="submit">
-        <BiSend className="-rotate-90 text-lg fill-secondary " />
+        <BiSend className="-rotate-90 text-lg fill-primary " />
       </button>
     </form>
   );

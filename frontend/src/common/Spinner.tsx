@@ -3,7 +3,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const override = {
   display: "block",
   margin: "100px auto",
-  borderColor: "secondary secondary transparent",
+  borderColor: "secondary-100 secondary-100 transparent",
 };
 
 const Spinner = ({

@@ -30,7 +30,7 @@ const ChatLink = ({
     </>
   );
   const linkStyle =
-    "bg-secondary bg-opacity-20 hover:bg-opacity-50 w-full  justify-between items-center gap-4 p-4 flex ";
+    "bg-secondary-100 bg-opacity-20 hover:bg-opacity-50 w-full  justify-between items-center gap-4 p-4 flex ";
 
   return (
     <>
