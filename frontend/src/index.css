@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-dark-900;
+  @apply from-secondary-100 to-secondary-50 bg-gradient-to-tl text-dark-900;
+}
+
+button:active {
+  @apply scale-95 transition-transform
 }
 
 /* .light-blue-gradient {
@@ -11,7 +15,7 @@ body {
 }
 
 .border-light-blue {
-  @apply border-[1px]  border-dark-100  xl:rounded-xl
+  @apply border-[1px]   border-dark-50  xl:rounded-xl
 }
 
 .light-blue-card {
@@ -41,12 +45,12 @@ body {
 } */
 
 /* hr {
-  @apply  border-dark-100  border-opacity-30;
+  @apply   border-dark-50  border-opacity-30;
 } */
 
 /* input,
 select {
-  @apply w-full p-2 rounded-md bg-secondary-100 bg-opacity-10 appearance-none border-b-[1px] border-r-[1px]  border-dark-100  border-opacity-30;
+  @apply w-full p-2 rounded-md bg-secondary-100 bg-opacity-10 appearance-none border-b-[1px] border-r-[1px]   border-dark-50  border-opacity-30;
 
   &:focus {
     @apply outline-none

@@ -25,7 +25,7 @@ const Message = ({
     <div ref={ref}>
       <div
         className={
-          "px-4 py-2 rounded-3xl mt-1 max-w-[75%] min-w-min border-[1px]  border-dark-100   " +
+          "px-4 py-2 rounded-3xl mt-1 max-w-[75%] min-w-min    " +
           (sentByMe
             ? "bg-secondary-500  place-self-end"
             : "bg-secondary-200  place-self-start ")

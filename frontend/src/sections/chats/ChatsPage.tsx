@@ -9,14 +9,14 @@ const ChatsPage = () => {
   return (
     <>
       {/* pc */}
-      <Container className="border-[1px]   border-dark-100  rounded-md  xl:flex hidden h-full  bg-light overflow-hidden ">
+      <Container className="border-[1px]    border-dark-50  rounded-md  xl:flex hidden h-full  bg-light overflow-hidden  ">
         <ChatLinks />
-        <div className="flex  border-l-[1px]  border-dark-100   w-2/3 ">
+        <div className="flex  border-l-[1px]   border-dark-50   w-2/3 ">
           {<Chat />}
         </div>
       </Container>
       {/* mobile */}
-      <Container className=" xl:hidden flex h-full  ">
+      <Container className=" xl:hidden flex h-full bg-light ">
         {username ? <div className="w-full ">{<Chat />}</div> : <ChatLinks />}
       </Container>
     </>

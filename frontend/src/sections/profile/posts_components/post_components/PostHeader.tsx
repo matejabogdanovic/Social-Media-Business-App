@@ -17,7 +17,7 @@ const PostHeader = () => {
               {post.data.username}
             </span>
           </Link>
-          <div className="text-dark-900 ">{post.data.date}</div>
+          <div className="text-dark-200 ">{post.data.date}</div>
         </span>
       </div>
     </>

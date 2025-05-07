@@ -20,7 +20,7 @@ const PostPage = () => {
 
   return (
     <PostContext.Provider value={{ data: postData, setPostData: setPostData }}>
-      <div className=" xl:flex justify-center items-center h-full  [&>*]:xl:border-[1px] [&>*]:xl: border-dark-100  overflow-y-hidden">
+      <div className=" xl:flex justify-center items-center h-full  [&>*]:xl:border-[1px] [&>*]:xl:  border-dark-50  overflow-y-hidden">
         <PostView />
       </div>
     </PostContext.Provider>

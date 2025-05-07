@@ -5,6 +5,7 @@ import Comments from "./post_view_components/post_view_components/Comments";
 import PostDescription from "./PostDescription";
 import PostHeader from "./PostHeader";
 import ShareButton from "./post_buttons/ShareButton";
+import CloseButton from "../../../../common/CloseButton";
 
 const PostView = ({
   hideOverlay,
@@ -35,7 +36,7 @@ const PostView = ({
         >
           {/* photos */}
           <div
-            className="w-full h-full flex justify-center items-center bg-light xl:border-r-[1px] xl: border-dark-100   "
+            className="w-full h-full flex justify-center items-center bg-light xl:border-r-[1px] xl:  border-dark-50   "
             onTouchStart={() => {
               setActionsShown(false);
             }}
@@ -78,7 +79,7 @@ const PostView = ({
         >
           <div className=" flex items-start justify-between ">
             <PostHeader />
-            {hideOverlay && <button onClick={() => hideOverlay()}>X</button>}
+            {hideOverlay && <CloseButton onClick={hideOverlay} />}
           </div>
           <PostDescription />
         </div>

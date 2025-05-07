@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         dark: {
+          50: "#d7dbe0",
           100: "#b2b9c2",
           200: "#9aa1ab",
           300: "#545d69",

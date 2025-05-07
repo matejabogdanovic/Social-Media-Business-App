@@ -2,6 +2,7 @@ import { BiShareAlt } from "react-icons/bi";
 import { useState } from "react";
 import Button from "../../../../../common/Button";
 import { PostContextType, usePostContext } from "../../Post";
+import CloseButton from "../../../../../common/CloseButton";
 
 const ShareButton = () => {
   const [overlayShown, setOverlayShown] = useState<boolean>(false);
@@ -24,9 +25,7 @@ const ShareButton = () => {
               readOnly={true}
             />
 
-            <button className="p-2 " onClick={() => setOverlayShown(false)}>
-              X
-            </button>
+            <CloseButton onClick={() => setOverlayShown(false)} />
           </div>
         </div>
       )}

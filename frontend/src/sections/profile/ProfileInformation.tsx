@@ -10,7 +10,7 @@ import FollowButton from "./profile_information_components/profile_information_b
 const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
   const { username } = useParams();
   return (
-    <div className="relative bg-light border-[1px]  border-dark-100  xl:rounded-xl  overflow-hidden ">
+    <div className="relative bg-light border-[1px]   border-dark-50  xl:rounded-xl  overflow-hidden ">
       <Banner bannerUrl={data?.bannerUrl} className="w-full min-h-[200px] " />
       <RoundImage
         photoUrl={data?.photoUrl}
@@ -23,7 +23,7 @@ const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
             {data?.fname + " " + data?.lname}
           </div>
           <div>{data?.description}</div>
-          <div className="text-dark-900">{data?.location}</div>
+          <div className="text-dark-200">{data?.location}</div>
         </div>
 
         <div className="flex items-end gap-2 flex-wrap ">

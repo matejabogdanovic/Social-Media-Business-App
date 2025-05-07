@@ -6,7 +6,7 @@ import Container from "../../common/Container";
 
 const Navbar = ({ className = "" }: { className?: string }) => {
   return (
-    <nav className={"bg-light border-b-[1px]  border-dark-100  " + className}>
+    <nav className={"bg-light border-b-[1px]   border-dark-50  " + className}>
       <Container className="flex justify-between [&>*]:p-4 ">
         <NavLink
           to={"/"}

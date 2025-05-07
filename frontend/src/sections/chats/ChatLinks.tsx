@@ -9,7 +9,7 @@ const ChatLinks = () => {
     if (username) setSelected(username);
   }, [username]);
   return (
-    <div className="w-full xl:w-1/3 ">
+    <div className="w-full xl:w-1/3 bg-transparent">
       <ChatLink
         username="mateja"
         photoUrl="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
