@@ -1,7 +1,4 @@
-import {
-  MessageType,
-  SenderDataType,
-} from "../sections/chats/chat_components/chat_messages_components/Message";
+import { MessageType } from "../sections/chats/chat_components/chat_messages_components/Message";
 import { ProfileData } from "../sections/profile/ProfilePage";
 
 export class All {
@@ -16,8 +13,8 @@ export class All {
   getId(): number {
     return this.id;
   }
-  fetchMyData(): SenderDataType {
-    const myData: SenderDataType = {
+  fetchMyData() {
+    const myData = {
       id: 0,
       username: "mateja",
       photoUrl:

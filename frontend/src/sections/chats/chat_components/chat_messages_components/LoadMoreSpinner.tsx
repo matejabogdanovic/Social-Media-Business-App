@@ -5,11 +5,9 @@ import { useParams } from "react-router-dom";
 const LoadMoreSpinner = ({
   scrollContainerRef,
   loadMoreData,
-  data,
 }: {
   scrollContainerRef: React.RefObject<HTMLDivElement | null>;
   loadMoreData: Function;
-  data: any[];
 }) => {
   const loadMoreSpinnerRef = useRef<HTMLDivElement>(null);
   //const loading = useRef(false);

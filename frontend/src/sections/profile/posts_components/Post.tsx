@@ -1,11 +1,8 @@
 import LikeButton from "./post_components/post_buttons/LikeButton";
 import PostGallery from "./post_components/PostGallery";
 import PostHeader from "./post_components/PostHeader";
-
 import { createContext, useContext, useRef, useState } from "react";
-
 import PostDescription from "./post_components/PostDescription";
-
 import PostView from "./post_components/PostView";
 import CommentButton from "./post_components/post_buttons/CommentButton";
 import ShareButton from "./post_components/post_buttons/ShareButton";

@@ -1,11 +1,7 @@
-import { Link, useOutletContext, useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import Container from "../../common/Container";
-import RoundImage from "../../common/RoundImage";
 import { useEffect, useState } from "react";
 import { All } from "../../roles/All";
-import Banner from "./profile_information_components/Banner";
-import { BiSend } from "react-icons/bi";
-import { MdEmail, MdMail } from "react-icons/md";
 import ProfileInformation from "./ProfileInformation";
 import Posts from "./Posts";
 

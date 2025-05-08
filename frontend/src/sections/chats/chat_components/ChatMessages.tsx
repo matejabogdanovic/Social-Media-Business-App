@@ -15,7 +15,6 @@ const ChatMessages = () => {
   };
   const [data, setData] = useState<MessageType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [loadedAll, setLoadedAll] = useState<boolean>(false);
 
   useEffect(() => {
     setData(user.fetchMessages(1, 0, 5));
