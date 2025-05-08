@@ -28,13 +28,17 @@ const PostView = ({
       }`}
     >
       <div
-        className={` grid xl:grid-cols-[2fr_1fr] xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full xl:overflow-y-auto overflow-y-scroll  `}
+        className={` grid ${
+          post.data.content.length > 0 ? "xl:grid-cols-[2fr_1fr]" : ""
+        } xl:grid-rows-[auto_1fr_1fr] grid-cols-1 grid-rows-[auto_auto_1fr]  h-full xl:overflow-y-auto overflow-y-scroll  `}
       >
         {/* gallery */}
+
         <div
           className={`order-2 xl:col-start-1 xl:row-start-1  xl:row-end-4 w-full flex justify-center items-center  relative    `}
         >
           {/* photos */}
+
           <div
             className="w-full h-full flex justify-center items-center bg-light xl:border-r-[1px] xl:  border-dark-50   "
             onTouchStart={() => {
@@ -54,21 +58,24 @@ const PostView = ({
               />
             ))}
           </div>
+
           {/* buttons mobile */}
-          <div
-            className={
-              `xl:hidden absolute  right-0 bottom-1/3 transition-opacity  ${
-                swiped === "up" ? " hidden" : ""
-              }  ` + (actionsShown ? "opacity-100" : "opacity-0")
-            }
-          >
-            <div className="bg-light rounded-l-full [&>*]:w-full">
-              <LikeButton />
+          {post.data.content.length > 0 && (
+            <div
+              className={
+                `xl:hidden absolute  right-0 bottom-1/3 transition-opacity   ${
+                  swiped === "up" ? " hidden" : ""
+                }  ` + (actionsShown ? "opacity-100" : "opacity-0")
+              }
+            >
+              <div className="bg-light rounded-l-full [&>*]:w-full">
+                <LikeButton />
+              </div>
+              <div className="bg-light rounded-l-full  mt-2 [&>*]:w-full">
+                <ShareButton />
+              </div>
             </div>
-            <div className="bg-light rounded-l-full  mt-2 [&>*]:w-full">
-              <ShareButton />
-            </div>
-          </div>
+          )}
         </div>
 
         {/* header and description */}
@@ -90,10 +97,16 @@ const PostView = ({
         >
           {/* buttons xl */}
           <div
-            className={`  px-4 py-2 xl:flex flex-row-reverse items-start gap-2  hidden  ${
+            className={`  px-4 py-2 xl:flex flex-row-reverse items-start gap-2  ${
+              post.data.content.length > 0
+                ? "hidden"
+                : swiped == "up"
+                ? "hidden"
+                : "flex"
+            }  ${
               !actionsShown && swiped !== "up"
-                ? "[&+*]:opacity-0"
-                : "[&+*]:opacity-100"
+                ? "[&+*]:opacity-0 "
+                : "[&+*]:opacity-100 "
             }`}
           >
             <LikeButton />

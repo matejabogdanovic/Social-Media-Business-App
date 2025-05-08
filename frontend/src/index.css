@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   @apply from-secondary-100 to-secondary-50 bg-gradient-to-tl text-dark-900;
 }

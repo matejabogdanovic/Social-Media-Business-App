@@ -22,15 +22,14 @@ const ChatLink = ({
       </div>
       <span
         className={
-          "bg font-bold text-accent " + (newMessage ? "" : "opacity-0")
+          "from-primary to-accent bg-gradient-to-tr rounded-full p-1 " +
+          (newMessage ? "" : "opacity-0")
         }
-      >
-        o
-      </span>
+      ></span>
     </>
   );
   const linkStyle =
-    "bg-transparent hover:bg-secondary-100 w-full  justify-between items-center gap-4 p-4 flex active:!scale-100 ";
+    "bg-transparent  hover:bg-secondary-100 w-full  justify-between items-center gap-4 p-4 flex active:!scale-100 ";
 
   return (
     <>

@@ -49,15 +49,15 @@ const Post = ({ data }: { data: PostData }) => {
         <PostHeader />
 
         <PostDescription />
-
-        <PostGallery
-          showOverlay={() => {
-            showComments.current = false;
-            showOverlay();
-          }}
-          className="w-full flex items-center justify-center  "
-        />
-
+        {data.content.length > 0 && (
+          <PostGallery
+            showOverlay={() => {
+              showComments.current = false;
+              showOverlay();
+            }}
+            className="w-full flex items-center justify-center  "
+          />
+        )}
         {/* overlay */}
         {overlayShowing && (
           <div className="absolute z-10 w-full h-full top-0 left-0 bg-dark-900 bg-opacity-50 flex items-center   ">

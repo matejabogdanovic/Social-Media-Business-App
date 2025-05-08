@@ -14,12 +14,12 @@ const LoadMoreButton = ({
         loadMoreData();
       }}
       disabled={loading}
-      className="flex justify-center items-center p-4 my-4 bg-dark-50   xl:rounded-xl !rounded-full "
+      className="flex justify-center items-center p-4 my-4 from-secondary-100 to-secondary-50 bg-gradient-to-b w-fit self-center  rounded-full   "
     >
       {loading ? (
         <Spinner loading={loading} className="!max-w-5 !max-h-5 !my-0 " />
       ) : (
-        <FaArrowLeft className="rotate-90 !min-w-5 !min-h-5" />
+        <FaArrowLeft className="rotate-90 !min-w-5 !min-h-5 fill-primary" />
       )}
     </button>
   );

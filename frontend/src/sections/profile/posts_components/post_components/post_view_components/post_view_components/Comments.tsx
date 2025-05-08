@@ -3,6 +3,7 @@ import { PostContextType, usePostContext } from "../../../Post";
 import Comment, { CommentType } from "./comments_components/Comment";
 import CommentInputForm from "./comments_components/CommentInputForm";
 import CommentContextProvider from "./comments_components/CommentContextProvider";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const Comments = ({
   swiped,
@@ -62,19 +63,23 @@ const Comments = ({
       className={`flex-grow bg-light  grid grid-rows-[auto_1fr] overflow-hidden  `}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      onClick={() => {
+        setSwiped((prev) => (prev === "up" ? "down" : "up"));
+      }}
     >
       {/* comments header */}
       <div
         className={`w-full  xl:static  ${
           swiped === "up" ? "" : "fixed"
         } bottom-0 `}
-        onClick={() => {
-          setSwiped((prev) => (prev === "up" ? "down" : "up"));
-        }}
       >
-        <div className="font-semibold text-center w-full bg-light  py-1 px-2 mt-auto  ">
+        <div className="font-semibold w-full bg-light text-primary  py-1 px-2 mt-auto grid justify-center rounded-t-3xl border-t-2 border-primary  ">
+          <FaArrowLeft
+            className={`${
+              swiped === "up" ? "-rotate-90 " : "rotate-90 "
+            }  fill-primary mx-auto xl:hidden `}
+          />
           Comments {post.data.commentNumber}
-          <div className="h-1 w-12 mx-auto rounded-full bg-dark-900 self-center"></div>
         </div>
       </div>
 
