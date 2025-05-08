@@ -12,9 +12,15 @@ const PostGallery = ({
   if (!post) return;
 
   return (
-    <div className={className + " cursor-pointer"} onClick={showOverlay}>
+    <div
+      className={
+        className +
+        " cursor-pointer flex flex-col justify-start items-center overflow-y-scroll max-h-[500px] w-full"
+      }
+      onClick={showOverlay}
+    >
       {post.data.content.map((url, index) => (
-        <img src={url} className="block max-h-[500px]" key={index} />
+        <img src={url} className="max-h-[500px]" key={index} />
       ))}
     </div>
   );

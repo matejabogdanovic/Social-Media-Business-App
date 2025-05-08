@@ -55,7 +55,6 @@ const Post = ({ data }: { data: PostData }) => {
               showComments.current = false;
               showOverlay();
             }}
-            className="w-full flex items-center justify-center  "
           />
         )}
         {/* overlay */}

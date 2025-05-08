@@ -40,7 +40,7 @@ const PostView = ({
           {/* photos */}
 
           <div
-            className="w-full h-full flex justify-center items-center bg-light xl:border-r-[1px] xl:  border-dark-50   "
+            className="w-full h-full flex flex-col justify-start items-center bg-light xl:border-r-[1px] xl:  border-dark-50  xl:overflow-y-scroll  "
             onTouchStart={() => {
               setActionsShown(false);
             }}
@@ -52,7 +52,7 @@ const PostView = ({
               <img
                 src={url}
                 className={`block  transition-all duration-400 xl:max-h-full ${
-                  swiped === "up" ? " max-h-[10vh]" : "max-h-[100vh]"
+                  swiped === "up" ? " max-h-0" : "max-h-[100vh]"
                 } pointer-events-none`}
                 key={index}
               />
@@ -63,7 +63,7 @@ const PostView = ({
           {post.data.content.length > 0 && (
             <div
               className={
-                `xl:hidden absolute  right-0 bottom-1/3 transition-opacity   ${
+                `xl:hidden fixed  right-0 bottom-1/3 transition-opacity   ${
                   swiped === "up" ? " hidden" : ""
                 }  ` + (actionsShown ? "opacity-100" : "opacity-0")
               }

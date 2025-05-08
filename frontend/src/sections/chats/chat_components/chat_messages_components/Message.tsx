@@ -27,13 +27,17 @@ const Message = ({
         className={
           "px-4 py-2 rounded-3xl mt-1 max-w-[75%] min-w-min    " +
           (sentByMe
-            ? "bg-secondary-500  place-self-end"
-            : "bg-secondary-200  place-self-start ")
+            ? "bg-primary text-light place-self-end"
+            : "bg-secondary-100 place-self-start ")
         }
       >
         {content}
       </div>
-      <div className={sentByMe ? "text-right" : "text-left"}>{date}</div>
+      <div
+        className={"text-dark-200 " + (sentByMe ? "text-right" : "text-left")}
+      >
+        {date}
+      </div>
     </div>
   ) : (
     <></>

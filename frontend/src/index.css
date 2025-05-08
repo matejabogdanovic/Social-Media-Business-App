@@ -24,7 +24,7 @@ button:active {
   @apply light-blue-gradient border-light-blue xl:rounded-xl
 } */
 
-/* Scrollbar stil globalno
+/* Scrollbar stil globalno */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -36,15 +36,15 @@ button:active {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: theme('colors.primary');
+  background-color: theme('colors.dark.100');
   border-radius: 6px;
-} */
+}
 
 /* Firefox podrška */
-/* * {
+* {
   scrollbar-width: thin;
-  scrollbar-color: theme('colors.primary') theme('colors.secondary.50');
-} */
+  scrollbar-color: theme('colors.dark.100') theme('colors.secondary.50');
+}
 
 /* hr {
   @apply   border-dark-50  border-opacity-30;
