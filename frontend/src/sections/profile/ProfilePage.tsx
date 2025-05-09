@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { All } from "../../roles/All";
 import ProfileInformation from "./ProfileInformation";
 import Posts from "./Posts";
+import WorkHistory from "./WorkHistory";
 
 export type ProfileData = {
   id: number;
@@ -27,6 +28,7 @@ const ProfilePage = () => {
   return (
     <Container>
       <ProfileInformation data={data} />
+      <WorkHistory />
       <Posts />
     </Container>
   );
