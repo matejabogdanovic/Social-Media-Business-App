@@ -5,6 +5,7 @@ import { All } from "../../roles/All";
 import ProfileInformation from "./ProfileInformation";
 import Posts from "./Posts";
 import WorkHistory from "./WorkHistory";
+import Loader from "../../common/loader/Loader";
 
 export type ProfileData = {
   id: number;
@@ -22,15 +23,23 @@ const ProfilePage = () => {
   const { user }: { user: All } = useOutletContext();
   const [data, setData] = useState<ProfileData>();
 
-  useEffect(() => {
-    setData(user.fetchProfileData());
-  }, [username, user]);
   return (
-    <Container>
-      <ProfileInformation data={data} />
-      <WorkHistory />
-      <Posts />
-    </Container>
+    <Loader
+      loaderFunction={() =>
+        user.fetchProfileData(username ?? "").then((d) => {
+          setData(d ?? undefined);
+          return d;
+        })
+      }
+      loadingDependencyList={[username, user]}
+      errorCondition={!data}
+    >
+      <Container>
+        <ProfileInformation data={data} />
+        <WorkHistory />
+        <Posts />
+      </Container>
+    </Loader>
   );
 };
 

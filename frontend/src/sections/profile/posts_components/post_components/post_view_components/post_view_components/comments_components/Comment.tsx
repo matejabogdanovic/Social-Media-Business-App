@@ -2,11 +2,10 @@ import { Link } from "react-router-dom";
 import RoundImage from "../../../../../../../common/RoundImage";
 
 export type CommentType = {
-  id: number;
+  postId: number;
 
   username: string;
   photoUrl: string;
-
   date: string;
   comment: string;
 };

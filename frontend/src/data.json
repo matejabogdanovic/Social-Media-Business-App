@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "token": "gmBHjknsIHB123nKJBHJIFSBDAoi1"
+    }
+  ],
+  "profile": [
+    {
+      "id": "0",
+      "username": "mateja",
+      "fname": "Mateja",
+      "lname": "Bogdanovic",
+      "email": "mateja@hotmail.com",
+      "description": "Web Developer",
+      "location": "Belgrade, Serbia",
+      "photoUrl": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "1",
+      "username": "lazarn",
+      "fname": "Lazar",
+      "lname": "Nikolic",
+      "email": "lazarn@hotmail.com",
+      "description": "Backend Developer",
+      "location": "Belgrade, Serbia",
+      "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "content": [
+        "https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "description": "My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.",
+      "date": "16.10.2025.",
+      "likeNumber": 12,
+      "commentNumber": 2,
+      "isLiked": false,
+      "username": "mateja",
+      "photoUrl": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 1,
+      "content": [
+        "https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "description": "My lion king ahhahahah what.My lion king ahhahahah what.My lion king ahhahahah what.",
+      "date": "16.10.2025.",
+      "likeNumber": 6,
+      "commentNumber": 1,
+      "isLiked": true,
+      "username": "mateja",
+      "photoUrl": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": "0",
+
+      "username": "lazarn",
+      "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "date": "1 hr ago",
+      "comment": "Baš lepo objašnjeno, hvala ti na ovom postu!"
+    },
+    {
+      "id": 2,
+      "postId": "0",
+
+      "username": "filip_t",
+      "photoUrl": "https://randomuser.me/api/portraits/men/12.jpg",
+      "date": "2025-05-04T11:03:00Z",
+      "comment": "Dodao bih još jedan savet u vezi ove teme..."
+    },
+    {
+      "id": 3,
+      "postId": "1",
+
+      "username": "milica.k",
+      "photoUrl": "https://randomuser.me/api/portraits/women/68.jpg",
+      "date": "2025-05-04T11:57:00Z",
+      "comment": "Ovo mi je baš pomoglo, nastavite sa ovakvim sadržajem!"
+    }
+  ]
+}

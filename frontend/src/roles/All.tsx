@@ -1,4 +1,6 @@
 import { MessageType } from "../sections/chats/chat_components/chat_messages_components/Message";
+import { PostData } from "../sections/profile/posts_components/Post";
+import { CommentType } from "../sections/profile/posts_components/post_components/post_view_components/post_view_components/comments_components/Comment";
 import { ProfileData } from "../sections/profile/ProfilePage";
 
 export class All {
@@ -23,21 +25,56 @@ export class All {
     return myData;
   }
 
-  fetchProfileData(): ProfileData {
-    const myData: ProfileData = {
-      id: 0,
-      fname: "Mateja",
-      lname: "Bogdanovic",
-      email: "mateja@hotmail.com",
-      description: "Web Developer", // regular description | role | education
-      location: "Belgrade, Serbia",
-      photoUrl:
-        "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      bannerUrl:
-        "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    };
-    return myData;
+  async fetchProfileData(username: string): Promise<ProfileData | null> {
+    try {
+      // const res = await fetch(`/api/profile/${username}`);
+
+      const res = await fetch(`/api/profile?username=${username}`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: ProfileData[] = await res.json();
+      return data[0];
+      // const data: ProfileData = await res.json();
+      // return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
   }
+
+  async fetchPosts(username: string): Promise<PostData[] | null> {
+    try {
+      // const res = await fetch(`/api/posts/${username}`);
+
+      const res = await fetch(`/api/posts?username=${username}`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: PostData[] = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
+  async fetchPostComments(postId: number): Promise<CommentType[] | null> {
+    try {
+      const res = await fetch(`/api/comments?postId=${postId}`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: CommentType[] = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
+
   fetchMessages(
     recieverId: number,
     recievedMessageCount: number,
