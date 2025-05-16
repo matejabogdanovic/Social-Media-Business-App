@@ -20,7 +20,7 @@ export type PostData = {
   photoUrl: string;
 };
 export type PostContextType = {
-  setPostData: React.Dispatch<React.SetStateAction<PostData>>;
+  setPostData: React.Dispatch<React.SetStateAction<PostData | undefined>>;
   data: PostData;
 } | null;
 
@@ -29,7 +29,7 @@ export const PostContext = createContext<PostContextType>(null);
 export const usePostContext = () => useContext(PostContext);
 
 const Post = ({ data }: { data: PostData }) => {
-  const [postData, setPostData] = useState<PostData>(data);
+  const [postData, setPostData] = useState<PostData | undefined>(data);
   const [overlayShowing, setOverlayShowing] = useState<boolean>(false);
   const showComments = useRef<boolean>(false);
   const showOverlay = () => {
@@ -38,6 +38,7 @@ const Post = ({ data }: { data: PostData }) => {
   const hideOverlay = () => {
     setOverlayShowing(false);
   };
+  if (!postData) return;
   return (
     <div className="flex flex-col  items-start border-[1px]   border-dark-50  xl:rounded-xl bg-light p-4 gap-2 my-4">
       <PostContext.Provider

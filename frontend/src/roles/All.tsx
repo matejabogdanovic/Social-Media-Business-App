@@ -2,6 +2,7 @@ import { MessageType } from "../sections/chats/chat_components/chat_messages_com
 import { PostData } from "../sections/profile/posts_components/Post";
 import { CommentType } from "../sections/profile/posts_components/post_components/post_view_components/post_view_components/comments_components/Comment";
 import { ProfileData } from "../sections/profile/ProfilePage";
+import { WorkType } from "../sections/profile/WorkListing";
 
 export class All {
   private id: number;
@@ -43,7 +44,23 @@ export class All {
       return null;
     }
   }
+  async fetchWork(username: string): Promise<WorkType[] | null> {
+    try {
+      const res = await fetch(`/api/work?username=${username}`);
 
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: { username: string; work: WorkType[] }[] = await res.json();
+
+      return data[0]?.work;
+      // const data WorkType[] = await res.json();
+      // return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
   async fetchPosts(username: string): Promise<PostData[] | null> {
     try {
       // const res = await fetch(`/api/posts/${username}`);
@@ -54,6 +71,20 @@ export class All {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
       const data: PostData[] = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
+  async fetchPost(postId: number | string): Promise<PostData | null> {
+    try {
+      const res = await fetch(`/api/posts/${postId}`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: PostData = await res.json();
       return data;
     } catch (e) {
       console.error("Failed to fetch profile data:", e);
