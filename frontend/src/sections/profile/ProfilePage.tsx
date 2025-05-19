@@ -11,11 +11,13 @@ export type ProfileData = {
   id: number;
   fname: string;
   lname: string;
+  companyName: string; // only for company profiles
   email: string;
   description: string; // regular description | role | education
   location: string;
   photoUrl: string;
   bannerUrl: string;
+  type: "REGULAR" | "COMPANY";
 };
 
 const ProfilePage = () => {

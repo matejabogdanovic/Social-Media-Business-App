@@ -6,6 +6,7 @@ import Banner from "./profile_information_components/Banner";
 import { ProfileData } from "./ProfilePage";
 import Button from "../../common/Button";
 import FollowButton from "./profile_information_components/profile_information_buttons/FollowButton";
+import CompanyProfileIcon from "./profile_information_components/profile_information_buttons/CompanyProfileIcon";
 
 const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
   const { username } = useParams();
@@ -20,7 +21,13 @@ const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
       <div className="pt-[calc(50px+0.25rem)]  pb-4 px-4 flex justify-between flex-wrap gap-4">
         <div>
           <div className="font-semibold text-xl xl:text-2xl">
-            {data?.fname + " " + data?.lname}
+            {data?.type == "REGULAR" ? (
+              data?.fname + " " + data?.lname
+            ) : (
+              <div className="flex flex-wrap gap-x-1 ">
+                {data?.companyName} <CompanyProfileIcon />
+              </div>
+            )}
           </div>
           <div>{data?.description}</div>
           <div className="text-dark-200">{data?.location}</div>
@@ -32,10 +39,12 @@ const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
             <MdMail />
             Contact
           </Button>
-          <Button to={`/chats/${username}`}>
-            <BiSend />
-            Message
-          </Button>
+          {data?.type !== "COMPANY" && (
+            <Button to={`/chats/${username}`}>
+              <BiSend />
+              Message
+            </Button>
+          )}
         </div>
       </div>
     </div>
