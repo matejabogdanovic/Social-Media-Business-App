@@ -182,5 +182,57 @@
         }
       ]
     }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "username": "facebook",
+      "companyName": "Facebook Company",
+      "position": "Frontend Developer",
+      "description": "Working on user interface development using React, TypeScript, and modern web technologies.",
+      "salary": 90000,
+      "date": "2025-05-21",
+      "location": "Menlo Park, CA"
+    },
+    {
+      "id": 2,
+      "username": "facebook",
+      "companyName": "Facebook Company",
+      "position": "Backend Engineer",
+      "description": "Development of scalable backend services in Java and integration with internal APIs.",
+      "salary": 105000,
+      "date": "2025-05-21",
+      "location": "Menlo Park, CA"
+    },
+    {
+      "id": 3,
+      "username": "facebook",
+      "companyName": "Facebook Company",
+      "position": "Data Scientist",
+      "description": "Analysis of large datasets and development of recommendation and personalization models.",
+      "salary": 115000,
+      "date": "2025-05-21",
+      "location": "Menlo Park, CA"
+    },
+    {
+      "id": 4,
+      "username": "facebook",
+      "companyName": "Facebook Company",
+      "position": "DevOps Engineer",
+      "description": "Managing CI/CD pipelines, cloud infrastructure, and system reliability for large-scale applications.",
+      "salary": 98000,
+      "date": "2025-05-21",
+      "location": "Menlo Park, CA"
+    },
+    {
+      "id": 5,
+      "username": "facebook",
+      "companyName": "Facebook Company",
+      "position": "UX/UI Designer",
+      "description": "Designing intuitive user experiences and interfaces in collaboration with product and development teams.",
+      "salary": 87000,
+      "date": "2025-05-21",
+      "location": "Menlo Park, CA"
+    }
   ]
 }

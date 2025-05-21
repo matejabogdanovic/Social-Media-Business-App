@@ -6,6 +6,7 @@ import ProfileInformation from "./ProfileInformation";
 import Posts from "./Posts";
 import WorkHistory from "./WorkHistory";
 import Loader from "../../common/loader/Loader";
+import Jobs from "./Jobs";
 
 export type ProfileData = {
   id: number;
@@ -38,6 +39,7 @@ const ProfilePage = () => {
     >
       <Container>
         <ProfileInformation data={data} />
+        <Jobs />
         <WorkHistory />
         <Posts />
       </Container>

@@ -32,7 +32,11 @@ export default {
           500: "#89b3f5", // 75
         },
 
-        accent: "#7840fd",
+        accent: {
+          100: "#e8eafc",
+          200: "#dcdffe",
+          500: "#7840fd", //62
+        },
       },
       keyframes: {
         likeBounce: {
