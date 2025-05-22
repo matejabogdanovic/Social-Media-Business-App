@@ -35,6 +35,8 @@ export default {
         accent: {
           100: "#e8eafc",
           200: "#dcdffe",
+          300: "#c9cdf5",
+
           500: "#7840fd", //62
         },
       },

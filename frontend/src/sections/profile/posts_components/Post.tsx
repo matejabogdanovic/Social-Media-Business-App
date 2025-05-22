@@ -40,7 +40,7 @@ const Post = ({ data }: { data: PostData }) => {
   };
   if (!postData) return;
   return (
-    <div className="flex flex-col  items-start border-[1px]   border-dark-50  xl:rounded-xl bg-light p-4 gap-2 my-4">
+    <div className="card flex flex-col  items-start gap-2 !my-4 ">
       <PostContext.Provider
         value={{ data: postData, setPostData: setPostData }}
       >

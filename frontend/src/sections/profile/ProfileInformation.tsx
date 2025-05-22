@@ -11,7 +11,7 @@ import CompanyProfileIcon from "./profile_information_components/profile_informa
 const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
   const { username } = useParams();
   return (
-    <div className="relative bg-light border-[1px]   border-dark-50  xl:rounded-xl  overflow-hidden ">
+    <div className="card !m-0 !p-0 overflow-hidden relative">
       <Banner bannerUrl={data?.bannerUrl} className="w-full min-h-[200px] " />
       <RoundImage
         photoUrl={data?.photoUrl}

@@ -81,3 +81,11 @@ input[type="search"]::-webkit-search-cancel-button {
 input[type="search"]::-moz-search-cancel-button {
   display: none;
 }
+
+.card {
+  @apply border-[1px] xl:rounded-xl p-4 mt-2 bg-light border-dark-50
+}
+
+.card.card--accent {
+  @apply !bg-accent-100 !border-accent-300
+}
