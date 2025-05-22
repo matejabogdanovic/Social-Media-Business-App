@@ -25,19 +25,19 @@ const WorkListing = ({ work }: { work: WorkType }) => {
         <div>{work.from}</div>
       </div>
 
-      <div
-        className={`flex flex-col justify-center w-full ${
-          work.to === "" ? "xl:text-xl text-lg" : ""
-        }`}
+      <Link
+        to={`/profile/${work.companyUsername}`}
+        className={`flex flex-col justify-center w-full 
+          
+        `}
       >
-        <div className="text-primary font-semibold">
-          <Link to={`/profile/${work.companyUsername}`}>
-            {work.companyName}
-          </Link>
+        <div className="font-semibold text-accent-500 xl:text-xl text-lg ">
+          {work.position}
         </div>
-        <hr className="border-dark-200" />
-        <div>{work.position}</div>
-      </div>
+
+        <hr className="border-dark-200 text-lg" />
+        <div>{work.companyName}</div>
+      </Link>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const JobListing = ({ job }: { job: JobType }) => {
     <div className="card card--accent !mt-0 flex flex-col justify-between">
       <div>
         <div className=" mb-2 flex items-end justify-between flex-wrap ">
-          <div className="text-xl font-semibold text-accent-500">
+          <div className="xl:text-xl text-lg font-semibold text-accent-500">
             {job.position}
           </div>
           <div className="text-dark-300 ">{job.date}</div>
