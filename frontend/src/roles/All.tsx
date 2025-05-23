@@ -118,8 +118,10 @@ export class All {
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
-      const data: number[] = await res.json();
-      return data;
+      const data = await res.json();
+      return data.posts;
+      // const data: number[] = await res.json();
+      // return data;
     } catch (e) {
       console.error("Failed to fetch profile data:", e);
       return null;

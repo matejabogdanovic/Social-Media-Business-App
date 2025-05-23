@@ -11,7 +11,8 @@ const Banner = ({
   return (
     <div
       className={
-        "flex items-center  bg-center bg-cover bg-no-repeat   " + className
+        "flex items-end justify-center  bg-center bg-cover bg-no-repeat   " +
+        className
       }
       style={{ backgroundImage: `url(${data?.bannerUrl})` }}
     >

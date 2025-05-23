@@ -242,5 +242,5 @@
       "location": "Menlo Park, CA"
     }
   ],
-  "recommended": [0, 1]
+  "recommended": { "posts": [0, 1] }
 }
