@@ -109,7 +109,22 @@ export class All {
       return null;
     }
   }
+  async fetchRecommendedPosts(): Promise<number[] | null> {
+    try {
+      // const res = await fetch(`/api/posts/${username}`);
 
+      const res = await fetch(`/api/recommended`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: number[] = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
   async fetchPosts(username: string): Promise<PostData[] | null> {
     try {
       // const res = await fetch(`/api/posts/${username}`);

@@ -8,6 +8,7 @@ import ProfilePage from "./sections/profile/ProfilePage";
 import PostPage from "./sections/profile/posts_components/PostPage";
 import Search from "./sections/search/Search";
 import Container from "./common/Container";
+import Recommended from "./sections/recommended/Recommended";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,6 +29,7 @@ const App = () => {
               element: (
                 <Container>
                   <Search />
+                  <Recommended />
                 </Container>
               ),
             },

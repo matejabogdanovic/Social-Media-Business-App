@@ -241,5 +241,6 @@
       "date": "2025-05-21",
       "location": "Menlo Park, CA"
     }
-  ]
+  ],
+  "recommended": [0, 1]
 }
