@@ -1,5 +1,5 @@
 import { ProfileData } from "../ProfilePage";
-import Bubble from "./profile_information_buttons/Bubble";
+import Bubble from "./Bubble";
 
 const Banner = ({
   className,
@@ -11,7 +11,7 @@ const Banner = ({
   return (
     <div
       className={
-        "flex items-center bg-center bg-cover bg-no-repeat  " + className
+        "flex items-center  bg-center bg-cover bg-no-repeat   " + className
       }
       style={{ backgroundImage: `url(${data?.bannerUrl})` }}
     >
