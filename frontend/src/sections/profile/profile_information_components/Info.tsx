@@ -1,4 +1,4 @@
-import { ProfileData } from "../../ProfilePage";
+import { ProfileData } from "../ProfilePage";
 import CompanyProfileIcon from "./CompanyProfileIcon";
 
 const Info = ({

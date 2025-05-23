@@ -6,6 +6,8 @@ import NavbarXLLayout from "./layouts/NavbarXLLayout";
 import ChatsPage from "./sections/chats/ChatsPage";
 import ProfilePage from "./sections/profile/ProfilePage";
 import PostPage from "./sections/profile/posts_components/PostPage";
+import Search from "./sections/search/Search";
+import Container from "./common/Container";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -23,7 +25,11 @@ const App = () => {
             {
               path: "/",
               index: true,
-              element: <>Main</>,
+              element: (
+                <Container>
+                  <Search />
+                </Container>
+              ),
             },
             {
               path: "/chats",

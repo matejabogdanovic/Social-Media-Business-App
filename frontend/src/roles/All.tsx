@@ -4,6 +4,7 @@ import { PostData } from "../sections/profile/posts_components/Post";
 import { CommentType } from "../sections/profile/posts_components/post_components/post_view_components/post_view_components/comments_components/Comment";
 import { ProfileData } from "../sections/profile/ProfilePage";
 import { WorkType } from "../sections/profile/WorkListing";
+import { SearchProfileData } from "../sections/search/Search";
 
 export class All {
   private id: number;
@@ -27,6 +28,34 @@ export class All {
     return myData;
   }
 
+  async searchProfiles(query: string): Promise<SearchProfileData[] | null> {
+    try {
+      const res = await fetch(`/api/profile`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: SearchProfileData[] = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
+  async searchJobs(query: string): Promise<JobType[] | null> {
+    try {
+      const res = await fetch(`/api/jobs`);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: JobType[] = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
   async fetchProfileData(username: string): Promise<ProfileData | null> {
     try {
       // const res = await fetch(`/api/profile/${username}`);
