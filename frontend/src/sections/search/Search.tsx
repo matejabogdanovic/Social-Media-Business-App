@@ -4,6 +4,7 @@ import JobListing, { JobType } from "../profile/JobListing";
 import SearchForm, { SearchFormContext } from "./SearchForm";
 import Listings from "../../common/Listings";
 import ProfilePreview from "../../common/ProfilePreview";
+import { Link } from "react-router-dom";
 
 export type SearchProfileData = {
   id: number;
@@ -35,7 +36,15 @@ const Search = () => {
             toggle === "user" ? (
               <ProfilePreview data={data} key={i} />
             ) : (
-              <JobListing job={data} key={i} />
+              <div key={i} className="">
+                <Link
+                  to={`/profile/${data.username}`}
+                  className="block text-light p-2 bg-accent-500 rounded-t-xl [&+*]:!rounded-t-none [&+*]:rounded-xl"
+                >
+                  @{data.username}
+                </Link>
+                <JobListing job={data} />
+              </div>
             )
           }
         />

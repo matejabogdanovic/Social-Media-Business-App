@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { FaArrowLeft } from "react-icons/fa6";
 
@@ -28,7 +28,9 @@ const Listings = ({
   mapFunction: (value: any, index: number, array: any[]) => ReactNode;
 }) => {
   const [showMore, setShowMore] = useState<number>(0);
-  console.log();
+  useEffect(() => {
+    setShowMore(0);
+  }, [data]);
   return !data || data?.length === 0 ? (
     noDataText !== "" ? (
       <div className={noDataText === "" ? "hidden" : ""}>{noDataText}</div>
