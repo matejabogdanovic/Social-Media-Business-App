@@ -24,7 +24,8 @@
       "location": "Belgrade, Serbia",
       "photoUrl": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-
+      "followers": 1,
+      "following": 22,
       "type": "REGULAR"
     },
     {
@@ -37,6 +38,8 @@
       "location": "Belgrade, Serbia",
       "photoUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "followers": 1,
+      "following": 10,
       "type": "REGULAR"
     },
     {
@@ -47,7 +50,8 @@
       "email": "milicak@hotmail.com",
       "description": "Frontend Developer",
       "location": "Novi Sad, Serbia",
-
+      "followers": 3,
+      "following": 6,
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 
       "photoUrl": "https://randomuser.me/api/portraits/women/68.jpg",
@@ -65,6 +69,8 @@
 
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "photoUrl": "https://randomuser.me/api/portraits/men/12.jpg",
+      "followers": 0,
+      "following": 0,
       "type": "REGULAR"
     },
     {
@@ -78,7 +84,8 @@
       "location": "Belgrade, Serbia",
       "photoUrl": "https://scontent.fbeg2-1.fna.fbcdn.net/v/t39.30808-6/380700650_10162533193146729_2379134611963304810_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=1BXdbfSP4BwQ7kNvwHUhrdU&_nc_oc=Admu1tJv9LsZ6m646vT7rsAFrApiN6qX8wIkHYY1pQXI9WQMDHq2MWugOMtRF92gTMo&_nc_zt=23&_nc_ht=scontent.fbeg2-1.fna&_nc_gid=f_K-cLWP_B_1FT6iXuTkcg&oh=00_AfLUsE4QffbOi13IwTQevRWY3mSEMP8ca3knTDwIAKxI1g&oe=6830EDFE",
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-
+      "followers": 120000,
+      "following": 0,
       "type": "COMPANY"
     }
   ],

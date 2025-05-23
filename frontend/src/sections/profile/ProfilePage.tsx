@@ -18,6 +18,8 @@ export type ProfileData = {
   location: string;
   photoUrl: string;
   bannerUrl: string;
+  followers: number;
+  following: number;
   type: "REGULAR" | "COMPANY";
 };
 
