@@ -1,5 +1,5 @@
 import { useState } from "react";
-import JobListing, { JobType } from "../profile/JobListing";
+import JobListing, { JobType } from "../job/JobListing";
 import SearchForm, { SearchFormContext } from "./SearchForm";
 import Listings from "../../common/Listings";
 import ProfilePreview from "../../common/ProfilePreview";

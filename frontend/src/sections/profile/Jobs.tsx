@@ -1,6 +1,6 @@
 import { useOutletContext, useParams } from "react-router-dom";
 import Loader from "../../common/loader/Loader";
-import JobListing, { JobType } from "./JobListing";
+import JobListing, { JobType } from "../job/JobListing";
 import { useState } from "react";
 import { All } from "../../roles/All";
 import Listings from "../../common/Listings";

@@ -9,6 +9,7 @@ import PostPage from "./sections/profile/posts_components/PostPage";
 import Search from "./sections/search/Search";
 import Container from "./common/Container";
 import Recommended from "./sections/recommended/Recommended";
+import JobPage from "./sections/job/JobPage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const App = () => {
             {
               path: "/profile/:username/posts/:id",
               element: <PostPage />,
+            },
+            {
+              path: "/jobs/:id",
+              element: <JobPage />,
             },
           ],
         },

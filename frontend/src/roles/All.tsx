@@ -1,5 +1,5 @@
 import { MessageType } from "../sections/chats/chat_components/chat_messages_components/Message";
-import { JobType } from "../sections/profile/JobListing";
+import { JobType } from "../sections/job/JobListing";
 import { PostData } from "../sections/profile/posts_components/Post";
 import { CommentType } from "../sections/profile/posts_components/post_components/post_view_components/post_view_components/comments_components/Comment";
 import { ProfileData } from "../sections/profile/ProfilePage";
@@ -42,6 +42,7 @@ export class All {
       return null;
     }
   }
+
   async searchJobs(query: string): Promise<JobType[] | null> {
     try {
       const res = await fetch(`/api/jobs`);
@@ -91,7 +92,20 @@ export class All {
       return null;
     }
   }
+  async fetchJob(id: string | number): Promise<JobType | null> {
+    try {
+      const res = await fetch(`/api/jobs/${id}`);
 
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data: JobType = await res.json();
+      return data;
+    } catch (e) {
+      console.error("Failed to fetch profile data:", e);
+      return null;
+    }
+  }
   async fetchJobs(username: string): Promise<JobType[] | null> {
     try {
       const res = await fetch(`/api/jobs?username=${username}`);
