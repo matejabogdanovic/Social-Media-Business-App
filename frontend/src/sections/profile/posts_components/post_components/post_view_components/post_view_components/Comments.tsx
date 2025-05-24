@@ -20,25 +20,9 @@ const Comments = ({
   const { user }: { user: All } = useOutletContext();
   const post: PostContextType = usePostContext();
   if (!post) return null;
-  const [startY, setStartY] = useState<number | null>(null);
+
   const [comments, setComments] = useState<CommentType[]>();
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setStartY(e.touches[0].clientY);
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (startY === null) return;
-
-    const endY = e.changedTouches[0].clientY;
-    const deltaY = endY - startY;
-
-    if (Math.abs(deltaY) > 30) {
-      setSwiped(deltaY > 0 ? "down" : "up");
-    }
-
-    setStartY(null);
-  };
   return (
     <Loader
       loaderFunction={() =>
@@ -53,17 +37,15 @@ const Comments = ({
     >
       <div
         className={`flex-grow bg-light  grid grid-rows-[auto_1fr] overflow-hidden  `}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        onClick={() => {
-          setSwiped((prev) => (prev === "up" ? "down" : "up"));
-        }}
       >
         {/* comments header */}
         <div
           className={`w-full  xl:static  ${
             swiped === "up" ? "" : "fixed"
           } bottom-0 `}
+          onClick={() => {
+            setSwiped((prev) => (prev === "up" ? "down" : "up"));
+          }}
         >
           <div className="font-semibold w-full bg-light text-dark-500  py-1 px-2 mt-auto grid justify-center rounded-t-3xl border-t-2 border-dark-500  ">
             <FaArrowLeft

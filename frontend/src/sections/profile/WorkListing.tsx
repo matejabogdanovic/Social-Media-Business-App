@@ -12,7 +12,7 @@ const WorkListing = ({ work }: { work: WorkType }) => {
   // fetch company name
 
   return (
-    <div className="flex items-stretch gap-2 min-h-[3lh] w-full ">
+    <div className="card card--accent flex items-stretch gap-2 min-h-[3lh] w-full ">
       <div className=" flex flex-col justify-between items-center text-dark-900">
         <div>
           {work.to === "" ? (
@@ -21,7 +21,7 @@ const WorkListing = ({ work }: { work: WorkType }) => {
             work.to
           )}
         </div>
-        <div className="w-1 h-full bg-dark-900 rounded-full"></div>
+        <div className="w-1 h-full min-h-[1lh] bg-dark-900 rounded-full"></div>
         <div>{work.from}</div>
       </div>
 

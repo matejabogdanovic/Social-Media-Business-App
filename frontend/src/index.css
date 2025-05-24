@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
+  font-family: "Montserrat", sans-serif;
   @apply from-secondary-100 to-secondary-50 bg-gradient-to-tl text-dark-900;
 }
 
@@ -13,21 +12,12 @@ button:active {
 }
 
 h1 {
-  @apply text-2xl font-bold my-2
+  @apply text-2xl font-bold mb-2
 }
 
-
-/* .light-blue-gradient {
-  @apply from-secondary-100 to-secondary-50 bg-gradient-to-br
+.link-hover-opacity {
+  @apply hover:bg-opacity-90 transition-opacity
 }
-
-.border-light-blue {
-  @apply border-[1px]   border-dark-50  xl:rounded-xl
-}
-
-.light-blue-card {
-  @apply light-blue-gradient border-light-blue xl:rounded-xl
-} */
 
 /* Scrollbar stil globalno */
 ::-webkit-scrollbar {
@@ -50,19 +40,6 @@ h1 {
   scrollbar-width: thin;
   scrollbar-color: theme('colors.dark.100') theme('colors.secondary.50');
 }
-
-/* hr {
-  @apply   border-dark-50  border-opacity-30;
-} */
-
-/* input,
-select {
-  @apply w-full p-2 rounded-md bg-secondary-100 bg-opacity-10 appearance-none border-b-[1px] border-r-[1px]   border-dark-50  border-opacity-30;
-
-  &:focus {
-    @apply outline-none
-  }
-} */
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -88,7 +65,7 @@ input[type="search"]::-moz-search-cancel-button {
 }
 
 .card {
-  @apply border-[1px] xl:rounded-xl p-4 bg-light border-dark-50
+  @apply border-[1px] rounded-xl p-4 bg-light border-dark-50
 }
 
 .card.card--accent {

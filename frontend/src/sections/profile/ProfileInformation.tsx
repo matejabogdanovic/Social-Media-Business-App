@@ -11,7 +11,7 @@ import Info from "./profile_information_components/Info";
 const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
   const { username } = useParams();
   return (
-    <div className="card !m-0 !p-0 overflow-hidden relative">
+    <div className="card !p-0 overflow-hidden relative">
       <Banner data={data} className="w-full min-h-[200px] " />
       <RoundImage
         photoUrl={data?.photoUrl}

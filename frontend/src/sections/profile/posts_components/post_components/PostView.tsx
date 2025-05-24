@@ -4,8 +4,9 @@ import LikeButton from "./post_buttons/LikeButton";
 import Comments from "./post_view_components/post_view_components/Comments";
 import PostDescription from "./PostDescription";
 import PostHeader from "./PostHeader";
-import ShareButton from "./post_buttons/ShareButton";
+
 import CloseButton from "../../../../common/CloseButton";
+import ShareButton from "../../../../common/ShareButton";
 
 const PostView = ({
   hideOverlay,
@@ -72,7 +73,9 @@ const PostView = ({
                 <LikeButton />
               </div>
               <div className="bg-light rounded-l-full  mt-2 [&>*]:w-full">
-                <ShareButton />
+                <ShareButton
+                  path={`${window.location.origin}/profile/${post.data.username}/posts/${post.data.id}`}
+                />
               </div>
             </div>
           )}
@@ -110,7 +113,9 @@ const PostView = ({
             }`}
           >
             <LikeButton />
-            <ShareButton />
+            <ShareButton
+              path={`${window.location.origin}/profile/${post.data.username}/posts/${post.data.id}`}
+            />
           </div>
           <Comments
             setSwiped={setSwiped}

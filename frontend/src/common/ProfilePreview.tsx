@@ -7,7 +7,7 @@ const ProfilePreview = ({ data }: { data: SearchProfileData }) => {
   return (
     <Link
       to={`/profile/${data.username}`}
-      className="card !mt-0 !p-2 !rounded-xl flex gap-2 items-start overflow-x-auto"
+      className="card !p-2 flex gap-2 items-start overflow-x-auto"
     >
       <RoundImage photoUrl={data.photoUrl} className="w-[70px] min-w-[70px] " />
       <div>

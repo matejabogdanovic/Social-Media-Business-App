@@ -1,8 +1,6 @@
 import { createContext, useContext, useState } from "react";
-
 import ToggleUserOrJobButton from "./ToggleUserOrJobButton";
 import SearchButton from "./SearchButton";
-import { ProfileData } from "../profile/ProfilePage";
 import { JobType } from "../profile/JobListing";
 import { useOutletContext } from "react-router-dom";
 import { All } from "../../roles/All";

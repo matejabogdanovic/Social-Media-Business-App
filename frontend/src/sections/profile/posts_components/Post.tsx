@@ -5,7 +5,7 @@ import { createContext, useContext, useRef, useState } from "react";
 import PostDescription from "./post_components/PostDescription";
 import PostView from "./post_components/PostView";
 import CommentButton from "./post_components/post_buttons/CommentButton";
-import ShareButton from "./post_components/post_buttons/ShareButton";
+import ShareButton from "../../../common/ShareButton";
 
 export type PostData = {
   id: number;
@@ -66,7 +66,9 @@ const Post = ({ data }: { data: PostData }) => {
         )}
 
         <div className="w-full flex justify-end gap-2 flex-wrap-reverse ">
-          <ShareButton />
+          <ShareButton
+            path={`${window.location.origin}/profile/${data.username}/posts/${data.id}`}
+          />
           <CommentButton
             onClick={() => {
               showComments.current = true;

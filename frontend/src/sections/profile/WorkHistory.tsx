@@ -3,6 +3,7 @@ import WorkListing, { WorkType } from "./WorkListing";
 import Loader from "../../common/loader/Loader";
 import { All } from "../../roles/All";
 import { useOutletContext, useParams } from "react-router-dom";
+import Listings from "../../common/Listings";
 
 const WorkHistory = () => {
   const [works, setWorks] = useState<WorkType[]>();
@@ -20,12 +21,16 @@ const WorkHistory = () => {
       loadingDependencyList={[user, username]}
     >
       {works && (
-        <div className="card card--accent mt-2">
-          <div className="flex flex-col gap-2 ">
-            {works.map((e, i) => (
-              <WorkListing work={e} key={i} />
-            ))}
-          </div>
+        <div className="card  mt-2">
+          <h1 className="">Work History</h1>
+          <Listings
+            minListingsToShow={3}
+            numOfCols={1}
+            showCnt={1}
+            data={works}
+            noDataText={""}
+            mapFunction={(e, i) => <WorkListing work={e} key={i} />}
+          />
         </div>
       )}
     </Loader>

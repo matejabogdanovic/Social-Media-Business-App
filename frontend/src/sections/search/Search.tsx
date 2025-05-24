@@ -1,6 +1,5 @@
 import { useState } from "react";
 import JobListing, { JobType } from "../profile/JobListing";
-
 import SearchForm, { SearchFormContext } from "./SearchForm";
 import Listings from "../../common/Listings";
 import ProfilePreview from "../../common/ProfilePreview";
@@ -21,7 +20,7 @@ const Search = () => {
   const [jobs, setJobs] = useState<JobType[]>([]);
   return (
     <div className="card ">
-      <h1 className="!mt-0">Search Users or Jobs</h1>
+      <h1 className="">Search Users or Jobs</h1>
       <SearchFormContext.Provider
         value={{ toggle, setToggle, users, setUsers, jobs, setJobs }}
       >
@@ -36,10 +35,10 @@ const Search = () => {
             toggle === "user" ? (
               <ProfilePreview data={data} key={i} />
             ) : (
-              <div key={i} className="">
+              <div key={i} className="flex flex-col [&>:last-child]:flex-1">
                 <Link
                   to={`/profile/${data.username}`}
-                  className="block text-light p-2 bg-dark-500 rounded-t-xl [&+*]:!rounded-t-none "
+                  className="block text-light p-2 bg-dark-500 rounded-t-xl [&+*]:!rounded-t-none link-hover-opacity"
                 >
                   @{data.username}
                 </Link>

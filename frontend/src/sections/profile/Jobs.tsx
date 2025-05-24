@@ -25,7 +25,7 @@ const Jobs = () => {
         <h1 className="block !m-0  text-light py-2 px-4 bg-dark-500 rounded-t-xl ">
           Available Jobs
         </h1>
-        <div className="card !rounded-b-xl !rounded-t-none">
+        <div className="card  !rounded-t-none">
           <Listings
             minListingsToShow={3}
             data={data}
