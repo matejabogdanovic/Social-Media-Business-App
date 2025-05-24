@@ -21,13 +21,18 @@ const Jobs = () => {
       loadingDependencyList={[username, user]}
       errorCondition={!data}
     >
-      <div className="mt-2">
-        <Listings
-          minListingsToShow={3}
-          data={data}
-          noDataText={""}
-          mapFunction={(job, i) => <JobListing job={job} key={i} />}
-        />
+      <div className="mt-2  ">
+        <h1 className="block !m-0  text-light py-2 px-4 bg-dark-500 rounded-t-xl ">
+          Available Jobs
+        </h1>
+        <div className="card !rounded-b-xl !rounded-t-none">
+          <Listings
+            minListingsToShow={3}
+            data={data}
+            noDataText={""}
+            mapFunction={(job, i) => <JobListing job={job} key={i} />}
+          />
+        </div>
       </div>
     </Loader>
   );

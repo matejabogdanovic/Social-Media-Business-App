@@ -9,12 +9,12 @@ const Listings = ({
 
   seeMoreIcon = (
     <div>
-      <FaArrowLeft className={` rotate-90  fill-primary `} />
+      <FaArrowLeft className={` rotate-90  fill-dark-500 `} />
     </div>
   ),
   seeLessIcon = (
     <div>
-      <FaArrowLeft className={` -rotate-90  fill-primary `} />
+      <FaArrowLeft className={` -rotate-90  fill-dark-500 `} />
     </div>
   ),
   mapFunction,

@@ -31,7 +31,7 @@ const WorkListing = ({ work }: { work: WorkType }) => {
           
         `}
       >
-        <div className="font-semibold text-accent-500 xl:text-xl text-lg ">
+        <div className="font-semibold text-dark-500 xl:text-xl text-lg ">
           {work.position}
         </div>
 

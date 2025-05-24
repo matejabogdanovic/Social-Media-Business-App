@@ -12,6 +12,11 @@ button:active {
   @apply scale-95 transition-transform
 }
 
+h1 {
+  @apply text-2xl font-bold my-2
+}
+
+
 /* .light-blue-gradient {
   @apply from-secondary-100 to-secondary-50 bg-gradient-to-br
 }
@@ -83,9 +88,18 @@ input[type="search"]::-moz-search-cancel-button {
 }
 
 .card {
-  @apply border-[1px] xl:rounded-xl p-4 mt-2 bg-light border-dark-50
+  @apply border-[1px] xl:rounded-xl p-4 bg-light border-dark-50
 }
 
 .card.card--accent {
-  @apply !bg-accent-100 !border-accent-300
+  @apply !bg-secondary-100 !border-secondary-200
+}
+
+.blur-light {
+  /* From https://css.glass */
+  background: rgba(249, 251, 254, 0.87);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
 }

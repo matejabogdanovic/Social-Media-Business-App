@@ -65,11 +65,11 @@ const Comments = ({
             swiped === "up" ? "" : "fixed"
           } bottom-0 `}
         >
-          <div className="font-semibold w-full bg-light text-primary  py-1 px-2 mt-auto grid justify-center rounded-t-3xl border-t-2 border-primary  ">
+          <div className="font-semibold w-full bg-light text-dark-500  py-1 px-2 mt-auto grid justify-center rounded-t-3xl border-t-2 border-dark-500  ">
             <FaArrowLeft
               className={`${
                 swiped === "up" ? "-rotate-90 " : "rotate-90 "
-              }  fill-primary mx-auto xl:hidden `}
+              }  fill-dark-500 mx-auto xl:hidden `}
             />
             Comments {post.data.commentNumber}
           </div>

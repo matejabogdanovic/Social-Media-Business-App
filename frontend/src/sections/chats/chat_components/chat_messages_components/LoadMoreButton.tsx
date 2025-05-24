@@ -19,7 +19,7 @@ const LoadMoreButton = ({
       {loading ? (
         <Spinner loading={loading} className="!max-w-5 !max-h-5 !my-0 " />
       ) : (
-        <FaArrowLeft className="rotate-90 !min-w-5 !min-h-5 fill-primary" />
+        <FaArrowLeft className="rotate-90 !min-w-5 !min-h-5 fill-dark-500" />
       )}
     </button>
   );

@@ -27,7 +27,7 @@ const Message = ({
         className={
           "px-4 py-2 rounded-3xl mt-1 max-w-[75%] min-w-min    " +
           (sentByMe
-            ? "bg-primary text-light place-self-end"
+            ? "bg-dark-500 text-light place-self-end"
             : "bg-secondary-100 place-self-start ")
         }
       >

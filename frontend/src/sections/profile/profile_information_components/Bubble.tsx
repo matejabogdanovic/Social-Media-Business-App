@@ -5,10 +5,10 @@ import Info from "./Info";
 
 const Bubble = ({ data }: { data: ProfileData | undefined }) => {
   return (
-    <div className=" xl:flex hidden xl:flex-row flex-col  bg-light rounded-full items-center flex-wrap m-2 gap-x-4 p-2 xl:pr-6    ">
+    <div className=" xl:flex hidden xl:flex-row flex-col  blur-light rounded-full items-center flex-wrap m-2 gap-x-4 p-2 xl:pr-6     ">
       <RoundImage
         photoUrl={data?.photoUrl}
-        className="w-[150px]   border-light  "
+        className="w-[130px]   border-light  "
       />
       <Info data={data} />
     </div>

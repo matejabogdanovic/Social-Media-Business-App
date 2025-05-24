@@ -20,7 +20,7 @@ const WorkHistory = () => {
       loadingDependencyList={[user, username]}
     >
       {works && (
-        <div className="card card--accent ">
+        <div className="card card--accent mt-2">
           <div className="flex flex-col gap-2 ">
             {works.map((e, i) => (
               <WorkListing work={e} key={i} />

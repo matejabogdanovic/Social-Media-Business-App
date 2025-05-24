@@ -20,8 +20,8 @@ const Search = () => {
   const [users, setUsers] = useState<SearchProfileData[]>([]);
   const [jobs, setJobs] = useState<JobType[]>([]);
   return (
-    <div className="card">
-      <h1 className="text-2xl font-bold my-2">Search Users or Jobs</h1>
+    <div className="card ">
+      <h1 className="!mt-0">Search Users or Jobs</h1>
       <SearchFormContext.Provider
         value={{ toggle, setToggle, users, setUsers, jobs, setJobs }}
       >
@@ -39,7 +39,7 @@ const Search = () => {
               <div key={i} className="">
                 <Link
                   to={`/profile/${data.username}`}
-                  className="block text-light p-2 bg-accent-500 rounded-t-xl [&+*]:!rounded-t-none [&+*]:rounded-xl"
+                  className="block text-light p-2 bg-dark-500 rounded-t-xl [&+*]:!rounded-t-none "
                 >
                   @{data.username}
                 </Link>

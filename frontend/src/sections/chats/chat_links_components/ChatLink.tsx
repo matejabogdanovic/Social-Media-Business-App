@@ -22,7 +22,7 @@ const ChatLink = ({
       </div>
       <span
         className={
-          "from-primary to-accent-500 bg-gradient-to-tr rounded-full p-1 " +
+          "from-dark-500 to-dark-500 bg-gradient-to-tr rounded-full p-1 " +
           (newMessage ? "" : "opacity-0")
         }
       ></span>

@@ -18,10 +18,10 @@ const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
         className="w-[150px] absolute top-[100px] left-[8px] border-[8px] border-light xl:hidden  "
       />
 
-      <div className="xl:p-4 pt-[calc(50px+0.25rem)]  pb-4 px-4 flex justify-between  gap-x-4 gap-y-2 flex-wrap">
+      <div className="xl:p-4 pt-[calc(50px+0.25rem)]  pb-4 px-4 flex justify-between  gap-x-4 gap-y-2 flex-wrap ">
         <Info data={data} className="flex flex-col xl:hidden" />
 
-        <div className="flex  xl:justify-start  gap-x-4 gap-y-2 flex-wrap text-center  font-semibold text-primary ">
+        <div className="flex  xl:justify-start  gap-x-4 gap-y-2 flex-wrap text-center  font-semibold text-dark-500 ">
           <div>
             Followers <div>{data?.followers}</div>
           </div>

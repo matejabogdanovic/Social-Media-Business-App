@@ -3,13 +3,13 @@ import { Link, LinkProps } from "react-router-dom";
 export type styleType =
   | "REGULAR"
   | "REGULAR_GRADIENT"
-  | "accent-500"
+  | "dark-500"
   | "DANGER"
   | "GOOD"
   | "DISABLED"
   | "DANGER_OUTLINE"
   | "REGULAR_OUTLINE"
-  | "accent-500_OUTLINE"
+  | "dark-500_OUTLINE"
   | "GOOD_OUTLINE"
   | "DISABLED_OUTLINE";
 const Button = ({
@@ -39,24 +39,24 @@ const Button = ({
     {
       style: "REGULAR_GRADIENT",
       styling:
-        "from-primary to-accent-500 bg-gradient-to-r  text-light outline-transparent ",
+        "from-dark-500 to-dark-500 bg-gradient-to-r  text-light outline-transparent ",
     },
     {
       style: "REGULAR",
-      styling: "bg-primary text-light outline-transparent ",
+      styling: "bg-dark-500 text-light outline-transparent ",
     },
     {
       style: "REGULAR_OUTLINE",
-      styling: "bg-inherit text-primary outline-primary  ",
+      styling: "bg-inherit text-dark-500 outline-dark-500  ",
     },
 
     {
-      style: "accent-500",
-      styling: "bg-accent-500 b text-light outline-transparent  ",
+      style: "dark-500",
+      styling: "bg-dark-500 b text-light outline-transparent  ",
     },
     {
-      style: "accent-500_OUTLINE",
-      styling: "bg-inherit text-accent-500 outline-accent-500 ",
+      style: "dark-500_OUTLINE",
+      styling: "bg-inherit text-dark-500 outline-dark-500 ",
     },
     {
       style: "DANGER",

@@ -13,8 +13,10 @@ const ToggleUserOrJobButton = ({
       type="button"
       onClick={onClick}
       className={`${
-        toggle === "user" ? "bg-primary" : "bg-accent-500"
-      } rounded-full p-2 text-base text-light transition-colors`}
+        toggle === "user"
+          ? "bg-transparent text-dark-500 "
+          : "bg-dark-500 text-light"
+      } rounded-full p-2 text-base  transition-colors`}
     >
       {toggle === "user" ? <BiUser /> : <MdBusinessCenter />}
     </button>

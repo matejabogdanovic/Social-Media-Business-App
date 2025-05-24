@@ -5,7 +5,7 @@ const SearchButton = ({ toggle }: { toggle: "user" | "job" }) => {
     <button
       type="submit"
       className={`${
-        toggle === "user" ? "bg-primary" : "bg-accent-500"
+        toggle === "user" ? "bg-dark-500" : "bg-dark-500"
       } rounded-full p-2 text-base text-light transition-colors`}
     >
       <BiSearch />

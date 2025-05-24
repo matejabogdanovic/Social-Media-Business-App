@@ -41,7 +41,8 @@ const ProfilePage = () => {
     >
       <Container>
         <ProfileInformation data={data} />
-        <Jobs />
+        {data?.type === "COMPANY" && <Jobs />}
+
         <WorkHistory />
         <Posts />
       </Container>

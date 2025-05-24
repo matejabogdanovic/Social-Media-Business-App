@@ -33,7 +33,7 @@ const ChatInputForm = () => {
         onChange={(e) => setMsg(e.target.value)}
         value={msg}
       />
-      <button type="submit" className="bg-primary rounded-full p-2">
+      <button type="submit" className="bg-dark-500 rounded-full p-2">
         <BiSend className="-rotate-90 text-base fill-light " />
       </button>
     </form>
