@@ -9,14 +9,19 @@ import { SearchProfileData } from "../sections/search/Search";
 export class All {
   private id: number;
   private token: string;
+  private username: string;
 
-  constructor(id: number, token: string) {
+  constructor(id: number, token: string, username?: string) {
     this.id = id;
     this.token = token;
+    this.username = username ?? "mateja";
   }
 
   getId(): number {
     return this.id;
+  }
+  getUsername(): string {
+    return this.username;
   }
   fetchMyData() {
     const myData = {
