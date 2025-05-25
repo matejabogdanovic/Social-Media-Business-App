@@ -51,7 +51,7 @@ const JobListing = ({
           {textLimiterActive ? (
             <TextLimiter
               text={job.description}
-              limit={100}
+              limit={50}
               onSeeMore={() => navigate(`/jobs/${job.id}`)}
             />
           ) : (

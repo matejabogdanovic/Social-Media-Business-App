@@ -5,6 +5,7 @@ import { All } from "../../roles/All";
 import JobListing, { JobType } from "./JobListing";
 import Container from "../../common/Container";
 import ProfilePreview from "../../common/ProfilePreview";
+import TextLimiter from "../../common/TextLimiter";
 
 const JobPage = () => {
   const { id } = useParams();
@@ -39,7 +40,9 @@ const JobPage = () => {
             />
             <div className="card">
               <h1>About Us</h1>
-              <div>{data.aboutUs}</div>
+              <div>
+                <TextLimiter text={data.aboutUs} limit={100} />
+              </div>
             </div>
           </div>
         </Container>

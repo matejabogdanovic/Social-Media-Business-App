@@ -1,6 +1,6 @@
 import { useOutletContext, useParams } from "react-router-dom";
 import Container from "../../common/Container";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { All } from "../../roles/All";
 import ProfileInformation from "./ProfileInformation";
 import Posts from "./Posts";
@@ -20,13 +20,14 @@ export type ProfileData = {
   bannerUrl: string;
   followers: number;
   following: number;
+  isFollowing: boolean;
   type: "REGULAR" | "COMPANY";
 };
 
 const ProfilePage = () => {
   const { username } = useParams();
   const { user }: { user: All } = useOutletContext();
-  const [data, setData] = useState<ProfileData>();
+  const [data, setData] = useState<ProfileData | undefined>();
 
   return (
     <Loader
@@ -39,13 +40,15 @@ const ProfilePage = () => {
       loadingDependencyList={[username, user]}
       errorCondition={!data}
     >
-      <Container>
-        <ProfileInformation data={data} />
-        {data?.type === "COMPANY" && <Jobs />}
+      {data && (
+        <Container>
+          <ProfileInformation data={data} setData={setData} />
+          {data.type === "COMPANY" && <Jobs />}
 
-        <WorkHistory />
-        <Posts />
-      </Container>
+          <WorkHistory />
+          <Posts />
+        </Container>
+      )}
     </Loader>
   );
 };

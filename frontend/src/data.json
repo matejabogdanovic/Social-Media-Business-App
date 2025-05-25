@@ -26,6 +26,7 @@
       "bannerUrl": "https://cdn.pixabay.com/photo/2022/05/21/03/03/website-7210581_1280.png",
       "followers": 1,
       "following": 22,
+      "isFollowing": false,
       "type": "REGULAR"
     },
     {
@@ -40,6 +41,7 @@
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "followers": 1,
       "following": 10,
+      "isFollowing": false,
       "type": "REGULAR"
     },
     {
@@ -55,6 +57,7 @@
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 
       "photoUrl": "https://randomuser.me/api/portraits/women/68.jpg",
+      "isFollowing": true,
       "type": "REGULAR"
     },
     {
@@ -71,6 +74,7 @@
       "photoUrl": "https://randomuser.me/api/portraits/men/12.jpg",
       "followers": 0,
       "following": 0,
+      "isFollowing": true,
       "type": "REGULAR"
     },
     {
@@ -86,6 +90,7 @@
       "bannerUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "followers": 120000,
       "following": 0,
+      "isFollowing": true,
       "type": "COMPANY"
     }
   ],

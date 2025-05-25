@@ -1,23 +1,29 @@
 import { MdPersonAdd, MdPersonAddDisabled } from "react-icons/md";
 import Button from "../../../../common/Button";
 
-const FollowButton = () => {
-  // const post: PostContextType = usePostContext();
-  // if (!post) return null;
+import { ProfileData } from "../../ProfilePage";
+
+const FollowButton = ({
+  data,
+  setData,
+}: {
+  data: ProfileData;
+  setData: React.Dispatch<React.SetStateAction<ProfileData | undefined>>;
+}) => {
   return (
     <Button
-      style={false ? "REGULAR" : "REGULAR_OUTLINE"}
+      style={data.isFollowing ? "REGULAR" : "REGULAR_OUTLINE"}
       onClick={() => {
-        // const newPostData = {
-        //   ...post.data,
-        //   likeNumber: post.data.likeNumber + (post.data.isLiked ? -1 : 1),
-        //   isLiked: !post.data.isLiked,
-        // };
-        // post.setPostData(newPostData);
-        // todo send notification that it's followed/unfollowed
+        const newData: ProfileData = {
+          ...data,
+          followers: data.followers + (data.isFollowing ? -1 : 1),
+          isFollowing: !data.isFollowing,
+        };
+        setData(newData);
+        // todo post request that I'm following one more person and that person is followed
       }}
     >
-      {false ? (
+      {data.isFollowing ? (
         <>
           <MdPersonAddDisabled /> Unfollow
         </>

@@ -1,15 +1,23 @@
-import { BiSend } from "react-icons/bi";
+import { BiEditAlt, BiSend } from "react-icons/bi";
 import { MdMail } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import Banner from "./profile_information_components/Banner";
 import { ProfileData } from "./ProfilePage";
 import Button from "../../common/Button";
 import FollowButton from "./profile_information_components/profile_information_buttons/FollowButton";
 import RoundImage from "../../common/RoundImage";
 import Info from "./profile_information_components/Info";
+import { All } from "../../roles/All";
 
-const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
+const ProfileInformation = ({
+  data,
+  setData,
+}: {
+  data: ProfileData;
+  setData: React.Dispatch<React.SetStateAction<ProfileData | undefined>>;
+}) => {
   const { username } = useParams();
+  const { user }: { user: All } = useOutletContext();
   return (
     <div className="card !p-0 overflow-hidden relative">
       <Banner data={data} className="w-full min-h-[200px] " />
@@ -29,16 +37,25 @@ const ProfileInformation = ({ data }: { data: ProfileData | undefined }) => {
             Following <div>{data?.following}</div>
           </div>
         </div>
+
         <div className="flex items-end  gap-2 flex-wrap w-full xl:w-auto  ">
-          <FollowButton />
-          <Button to={`mailto:${data?.email}`}>
-            <MdMail />
-            Contact
-          </Button>
-          {data?.type !== "COMPANY" && (
-            <Button to={`/chats/${username}`}>
-              <BiSend />
-              Message
+          {"" + data.id !== "" + user.getId() ? (
+            <>
+              <FollowButton data={data} setData={setData} />
+              <Button to={`mailto:${data?.email}`}>
+                <MdMail />
+                Contact
+              </Button>
+              {data?.type !== "COMPANY" && (
+                <Button to={`/chats/${username}`}>
+                  <BiSend />
+                  Message
+                </Button>
+              )}
+            </>
+          ) : (
+            <Button>
+              <BiEditAlt /> Edit
             </Button>
           )}
         </div>
